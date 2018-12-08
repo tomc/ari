@@ -1,0 +1,49 @@
+\documentclass[ebook,12pt,oneside]{memoir}
+\usepackage{bridgewinners} % taken without modification, but changing things below
+\usepackage{bridge-mini} % reduced version of my bridge.sty
+\usepackage{fontspec}
+\usepackage{unicode-math}  % to allow for new fonts in math mode (i.e., suit symbols)
+\usepackage{subfiles} % To have chapters be in separate docs
+
+\setmainfont{DejaVu Serif}
+\setmathfont{DejaVu Serif}
+
+% redefine the default color for diamonds and clubs
+\definecolor{clubcolor}{RGB}{23,118,88}
+\definecolor{diamondcolor}{RGB}{249,131,10}
+
+% What suit symbols to use?  Flag for BW printing vs ebook/web
+\newboolean{bwprint}
+\setboolean{bwprint}{true}
+\ifthenelse{\boolean{bwprint}}{%
+	\standardsuitsymbols}{%
+	\colorsuitsymbols}
+% ---------------- %
+
+\letterten
+\chapterstyle{ell}
+\begin{document}
+\frontmatter
+\tableofcontents
+
+\mainmatter
+\chapter{test chapter}
+test 1
+\breaker
+test 2
+\chapter{test chapter again}
+test 3
+test 4
+\rem{test}
+
+
+ 
+
+\begin{des}
+	\item[\cl2:] This is a test, doowop
+	\item[\di2:] more tests
+\end{des}	
+
+\subfile{testsub}
+\backmatter
+\end{document}

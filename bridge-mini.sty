@@ -1,0 +1,43 @@
+% Note, % = a comment to end of line
+
+
+\ProvidesPackage{bridge-mini}
+\usepackage{url,color,parskip,,}
+\usepackage[colorlinks,linkcolor=black,urlcolor=blue,pdfstartview=FitH]{hyperref}  
+\usepackage{ulem} % for strikeout font and \sout command
+
+%
+% \usepackage[top=2cm,bottom=2cm]{geometry}
+%
+% include above line in local file
+
+
+\newcommand{\handpat}[1]{{\sffamily #1}}
+
+\newcommand{\rem}[1]{\textit{\color{blue}#1}} % This used to read \emph instead of \textit, but having strange issues with \emph.
+%\newcommand{\rem}[1]{} % 'production' version
+
+\newcommand{\first}{1$^{st}$\thinspace}
+\newcommand{\second}{2$^{nd}$\thinspace}
+\newcommand{\third}{3$^{rd}$\thinspace}
+\newcommand{\fourth}{4$^{th}$\thinspace}
+\newcommand{\fifth}{5$^{th}$\thinspace}
+\newcommand{\half}{$\frac{1}{2}$\thinspace}
+
+
+%
+% des = Modified description
+% In the original description, \labelwidth is set to z@, which seems to 
+%   mean 'length of item'
+% Setting it to a fixed width gives smooth tabbing, so long as no text
+%   exceeds that width
+% leftmargin is distance the block starts from the left margin
+% itemindent is a first-line-only indent, set to 0 for smooth multi-line 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\newenvironment{des}
+               {\list{}{\labelwidth 20mm \itemindent 0cm \leftmargin 27mm
+                        \let\makelabel\descriptionlabel}}
+               {\endlist}
+
