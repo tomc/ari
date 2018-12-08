@@ -3,20 +3,32 @@
 
 \chapter{Introduction}
 
-Welcome to the latest attempt by Tom to use the \LaTeX family of tools to try to make system notes.  
+Welcome to the latest attempt by Tom to use the \LaTeX~family of tools to try to make system notes.  
 
 In this version, rather than using just my old macros from back in the day I am incorporating the Bridge Winners style file (with very slight modification).  I also have a miniature version of my old macros in bridge-mini.sty that I am including in the project.
 
-I'm using subfiles to try to make section management a bit easier.  I have pre-populated some dummy files for the opening bid section, but there will be more files coming down the road.
-
+I'm using subfiles for the first time, my hope is that having separate files for different chapters of the notes will make management a bit easier, especially using a git repo.  
 My expectation is the "to-do" section will be a list of items that we noted at the table.  As things are added to the notes, we can remove them from the to-do list.  Perhaps not perfect, but it's a reasonable first pass at managing the project on the whole.
 
 \section{Code Snippets}
 
 Throw some text as a test
 
-\flushleft{}\nsauction[Opener,Responder]{1c,1s,1n,2c,2d,?} 
+\flushleft{\nsauction[Opener,Responder]{1c,1s,1n,2c,2d,?}}
 % For reasons I don't understand, auction starts centered.  Flushleft forces it to be left justified, which is likely more desireable.
 
-You can reference bids such as \cl{1} \di{2} \he{3} or \sp{4} inline, or even cards such as \clubs{A} \diamonds{K} \hearts{Q} \spades{J}. 
+You can reference bids such as \cl{1} \di{2} \he{3} or \sp{4} inline, or even cards such as \clubs{A} \diamonds{K} \hearts{Q} \spades{J}. This can be expanded to suit holdings such as \spades{AKxx}.
+
+\section{Notation}
+
+\begin{des}
+	\item[R] Simple Raise
+	\item[R+1] One above a simple raise
+	\item[DR] Double Raise
+	\item[TR] Triple Raise
+	\item[LMH] Low-Middle-High
+	\item[+1] Next Bidding Step
+\end{des}
+
+
 \end{document}
