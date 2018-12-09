@@ -5,15 +5,16 @@
 \usepackage{unicode-math}  % to allow for new fonts in math mode (i.e., suit symbols)
 \usepackage{subfiles} % To have chapters be in separate docs
 
+
 \setmainfont{DejaVu Serif}
 \setmathfont{DejaVu Serif}
 
-\cftsetindents{part}{-1em}{3em}
+\cftsetindents{part}{-1em}{3em} % Adjust table of content defaults, numbers and titles were running together.
 \cftsetindents{chapter}{-1em}{3em}
 \cftsetindents{section}{0em}{3em}
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{1} % include sections
 
-\abnormalparskip{1em}
+\abnormalparskip{1em} % add space between paragraphs for readability
 
 % redefine the default color for diamonds and clubs
 \definecolor{clubcolor}{RGB}{23,118,88}
@@ -33,6 +34,8 @@
 
 \begin{document}
 \frontmatter
+\title{Carmichael/Greenberg System Notes}
+\maketitle
 \tableofcontents
 
 \mainmatter
