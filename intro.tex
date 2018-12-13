@@ -8,7 +8,7 @@ Welcome to the latest attempt by Tom to use the \LaTeX~family of tools to try to
 In this version, rather than using just my old macros from back in the day I am incorporating the Bridge Winners style file (with very slight modification).  I also have a miniature version of my old macros in bridge-mini.sty that I am including in the project.
 
 I'm using subfiles for the first time, my hope is that having separate files for different chapters of the notes will make management a bit easier, especially using a git repo.  
-My expectation is the "to-do" section will be a list of items that we noted at the table.  As things are added to the notes, we can remove them from the to-do list.  Perhaps not perfect, but it's a reasonable first pass at managing the project on the whole.
+My expectation is the ``to-do'' section will be a list of items that we noted at the table.  As things are added to the notes, we can remove them from the to-do list.  Perhaps not perfect, but it's a reasonable first pass at managing the project on the whole.
 
 \section{Code Snippets}
 
@@ -19,6 +19,11 @@ Throw some text as a test
 
 You can reference bids such as \cl{1} \di{2} \he{3} or \sp{4} inline, or even cards such as \clubs{A} \diamonds{K} \hearts{Q} \spades{J}. This can be expanded to suit holdings such as \spades{AKxx}.
 
+\shape{5332} any 5332 pattern
+\exactshape{5332} 5 \spadesuit, 2 \clubsuit, 3-3 in reds.  This is from BW style, previously Tom used \handpat{(5332)} or \handpat{5332}.  (Note there is supposed to be a change of font - seems subtle in this version.) 
+
+\rem{Comments which are expected to be removed in the ``production'' version.  Can be useful for development.}
+
 \section{Notation}
 
 \begin{description}
@@ -28,6 +33,9 @@ You can reference bids such as \cl{1} \di{2} \he{3} or \sp{4} inline, or even ca
 	\item[TR] Triple Raise
 	\item[LMH] Low-Middle-High
 	\item[+1] Next Bidding Step
+	\item[M] Major.  If one has been shown, it is the same one.
+	\item[OM] Other Major.  After a major is shown.
+	\item[m,om] Minor, other minor.
 \end{description}
 
 
