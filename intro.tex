@@ -17,6 +17,15 @@ Throw some text as a test
 \orauction{1c,1s,1n,2c,2d,?}
 % For reasons I don't understand, auction starts centered.  Flushleft forces it to be left justified, which is likely more desireable.
 
+\begin{BidTable}
+    {1n,2c}
+    {Standard responses to stayman}
+    \di2 &  No 4-card major \\
+    \he2 & 4+ \heartsuit. Could have 4 \spadesuit \\
+    \sp2 &  4+ \spadesuit. 4 \heartsuit ~is possible but unlikely \\
+\end{BidTable}
+
+
 You can reference bids such as \cl{1} \di{2} \he{3} or \sp{4} inline, or even cards such as \clubs{A} \diamonds{K} \hearts{Q} \spades{J}. This can be expanded to suit holdings such as \spades{AKxx}.
 
 \shape{5332} any 5332 pattern
