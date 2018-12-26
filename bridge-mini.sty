@@ -43,3 +43,52 @@
 
 %%%%%
 
+%%%%% Start BidTable
+
+\newcounter{bidtablenumbids}
+
+\def\bidtableauctioncolumnwidth{5em}
+
+\newcommand{\bidtableauction}[1]{
+{
+    \renewcommand{\arraystretch}{1}
+    \setlength\extrarowheight{5pt}
+    \setcounter{bidtablenumbids}{0}
+    \def\AddBeforeEndtabularx{}
+    \begin{tabularx}{10em}{@{}p{2em}p{2em}}
+        \forcsvlist{\bidtableprintbidinauction}{#1}
+    \end{tabularx}
+}}
+
+\newcommand{\bidtableprintbidinauction}[1]{
+    \printable{#1}
+    \stepcounter{bidtablenumbids}
+    \ifthenelse{\isodd{\thebidtablenumbids}}{&}{\\}
+}
+
+\makeatletter
+
+\def\AddBeforeEndtabularx{}
+
+\def\TX@find@end#1{%
+    \def\@tempa{#1}%
+    \ifx\@tempa\TX@%
+       \toks@\expandafter{\the\toks@\AddBeforeEndtabularx}%
+       \expandafter\TX@endtabularx
+    \else\toks@\expandafter
+       {\the\toks@\end{#1}}\expandafter\TX@get@body\fi}
+
+\makeatother
+
+\newenvironment{BidTable}[2]{%
+    \def\AddBeforeEndtabularx{\hline}
+    \renewcommand{\arraystretch}{1}
+    \setlength\extrarowheight{10pt}
+     % http://tex.stackexchange.com/a/42331/5764
+    \tabularx{\linewidth}{@{}|p{\bidtableauctioncolumnwidth}X|}
+        \hline
+        \bidtableauction{#1,?} & #2 \\
+        \hline
+}
+{\endtabularx}
+%}
