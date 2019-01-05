@@ -709,7 +709,7 @@ WEST&EAST\\%
 \newcommand{\orauction}[2][NoShow]{%
 	\noindent%
 	\gdef \seat@counter {0} %GDEF not DEF is important, otherwise it can't see the counter inside-vs-outside the for loop
-    % *** Adam's hspace command removed, want these to be on the left side
+    \hspace{\auctionhspace}
 	\begin{tabular}{@{}p{\ewauctionspace}p{\ewauctionspace}}
 		OPENER&RESPONDER\\%
 		\IfEq{#1}{NoShow}{}{%

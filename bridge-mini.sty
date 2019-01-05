@@ -26,7 +26,7 @@
 
 
 %
-% des = Modified description
+% Modified description
 % In the original description, \labelwidth is set to z@, which seems to 
 %   mean 'length of item'
 % Setting it to a fixed width gives smooth tabbing, so long as no text
@@ -37,9 +37,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \renewenvironment{description}
-               {\list{}{\labelwidth 20mm \itemindent 0cm \leftmargin 27mm
-                        \let\makelabel\descriptionlabel}}
-               {\endlist}
-
+	{\list{}{\labelwidth 20mm \itemindent 0cm \leftmargin 27mm
+		\let\makelabel\descriptionlabel}}
+	{\endlist}
 %%%%%
+
+\newenvironment{boxbid}[1]
+{\begin{center}
+
+		\begin{tabular}{|p{0.9\textwidth}|}
+			\hline\\
+		#1\\\hline\\  % was [1ex] after #1
+		}
+		{ 
+			\\\\\hline
+		\end{tabular} 
+	\end{center}
+}
 
