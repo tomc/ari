@@ -4,6 +4,8 @@
 \usepackage{url,color,parskip,lipsum}
 \usepackage[colorlinks,linkcolor=black,urlcolor=blue,pdfstartview=FitH]{hyperref}  
 \usepackage{ulem} % for strikeout font and \sout command
+\RequirePackage{longtable}
+\RequirePackage{tabu}
 
 %
 % \usepackage[top=2cm,bottom=2cm]{geometry}
@@ -42,16 +44,39 @@
 	{\endlist}
 %%%%%
 
-\newenvironment{boxbid}[1]
-{\begin{center}
-
-		\begin{tabular}{|p{0.9\textwidth}|}
-			\hline\\
-		#1\\\hline\\  % was [1ex] after #1
+\tabulinesep = 1mm
+\newenvironment{bidtable}[1]
+{
+	\begin{longtabu} to \textwidth {|>{\bfseries}lX|}
+	\hline
+	\multicolumn{2}{|l|}{#1}\\
+	\hline
+	\endfirsthead
+	\hline
+	\multicolumn{2}{|l|}{#1 cont\ldots}\\	
+	\hline
+	\endhead
+	\hline
+	\endfoot
 		}
 		{ 
-			\\\\\hline
-		\end{tabular} 
-	\end{center}
+	\end{longtabu}
 }
 
+\newenvironment{bidbox}[1]
+{\begin{center}
+		\begin{longtable}{|p{0.9\textwidth}|}
+			\hline
+			#1\\
+			\hline
+			\endfirsthead
+			\hline
+			#1 cont\ldots\\
+			\hline
+			\endhead
+			\hline
+			\endfoot
+}{
+	\end{longtable}
+	\end{center}
+}
