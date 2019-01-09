@@ -6,129 +6,120 @@
 Our 1NT opening shows 14-16 HCP. 5422 hands and 5332 hands with a 5-card major are routinely opened 1NT.
 5422 hands with a 5-card major and balanced hands with a 6-card minor can be opened 1NT as well.
 
-\orauction{1n,?}
-\begin{description}
-  \item[\cl2] Stayman. Promises at least one 4-card major.
-  \item[\di2] 5+ \heartsuit
-  \item[\he2] 5+ \spadesuit
-  \item[\sp2] Range ask. Includes hands with interest in \clubsuit.
-  \item[2NT] Puppet stayman.
-  \item[\cl3] 6+ \diamondsuit
-  \item[\di3] 5+ \diamondsuit, 5+ \clubsuit, GF
-  \item[\he3/\sp3] 1354/3154, GF. Singleton in the suit bid.
-  \item[3NT] To play
-  \item[\cl4] Gerber
-  \item[\di4] Transfer to \heartsuit
-  \item[\he4] Transfer to \spadesuit
-\end{description}
-
+\begin{bidtable}{\orauction{1n,?}}
+	\cl2 & Stayman. Promises at least one 4-card major. \\
+	\di2 & 5+ \heartsuit\\
+	\he2 & 5+ \spadesuit\\
+	\sp2 & Range ask. Includes hands with interest in \clubsuit.\\
+	2NT & Puppet stayman.\\
+	\cl3 & 6+ \diamondsuit\\
+	\di3 & 5+ \diamondsuit, 5+ \clubsuit, GF\\
+	\he3/\sp3 & 1354/3154, GF. Singleton in the suit bid.\\
+	3NT & To play\\
+	\cl4 & Gerber (1430)\\
+	\di4 & Transfer to \heartsuit\\
+	\he4 & Transfer to \spadesuit\\
+	\sp4 & Both minors, balanced, Quant or better\\
+\end{bidtable}
+	
 \section{Stayman Sequences}
 
-\orauction{1n,2c,?}
-\begin{description}
-  \item[\di2] No 4-card major
-  \item[\he2] 4 \heartsuit, could have 4 \spadesuit
-  \item[\sp2] 4 \spadesuit, typically denies 4 \heartsuit
-\end{description}
+\begin{bidtable}{\orauction{1n,2c,?}}
+	\di2 & No 4-card major\\
+	\he2 & 4+ \heartsuit, could have 4 \spadesuit\\
+	\sp2 & 4+ \spadesuit\\
+	& \rem{I usually prefer \sp2 does not deny 4 hearts}\\
+\end{bidtable}
 
-\orauction{1n,2c,2d,?}
-\begin{description}
-  \item[\he2] Weak hand with both majors. Pass or correct.
-  \item[\sp2] 5\spadesuit, invitational. All invites with 5\spadesuit ~go through this sequence. % ~ is a non-breaking space, forced the issue.
-  % Other approaches such as \spades{5} might work. That's a BW thing, intended for cards/holdings but might work for inline cases like this too.
-  % Enclosing inside of {} would probably also work.  I haven't tested. - Tom
-  \item[2NT] Invitiational. Promises at least one 4-card major.
-  \item[\cl3/\di3] 5+ m, GF.
-  \item[\he3/\sp3] Smolen. 4M, 5+ OM, GF.
-  \item[\cl4] Gerber
-  \item[\di4] Delayed Texas. 4\spadesuit, 6\heartsuit
-  \item[\he4] Delayed Texas. 6\spadesuit, 4\heartsuit
-\end{description}
+\begin{bidtable}{\orauction{1n,2c,2d,?}}
+	\he2 & Weak hand with both majors. Pass or correct. \\
+  	\sp2 & 5\spadesuit, invitational. All invites with 5\spadesuit ~go through this sequence. \\% ~ is a non-breaking space, forced the issue.
+	2NT & Invitiational. Promises at least one 4-card major.\\
+	\cl3/\di3 & 5+ m, GF.\\
+	\he3/\sp3 & Smolen. 4M, 5+ OM, GF.\\
+	\cl4 & Gerber(1430)\\
+	\di4 & Delayed Texas. 4\spadesuit, 6\heartsuit\\
+	\he4 & Delayed Texas. 6\spadesuit, 4\heartsuit	\\
+\end{bidtable}
 
-\orauction{1n,2c,2d,2s,?}
-\begin{description}
-  \item[P] Minimum, 2-3\spadesuit. With exactly 2, 2NT is an option as well.
-  \item[2NT] Minimum, 2\spadesuit. 3m rebids by responder are natural. Still game invitational, but passable.
-  \item[\cl3] Maximum with 2\spadesuit, GF. Responder may show 2 suited hands LMH via the next 3 steps.
-  \item[\di3] Maximum with 3\spadesuit. Responder can bid 3NT to offer choice preferring NT, \sp3 to offer choice preferring spades, or \sp4 to sign off.
-              Other bids are unusual, but possible with 2 suited hands.
-  \item[\sp3] Minimum, 3\spadesuit. Better than pass, not enough to commit to game.
-  \item[3NT] Probably a 2-card maximum that forgot to bid \cl3.
-\end{description}
+\begin{bidtable}{\orauction{1n,2c,2d,2s,?}}
+	P & Minimum, 2-3\spadesuit. With exactly 2, 2NT is an option as well.\\
+	2NT & Minimum, 2\spadesuit. 3m rebids by responder are natural. Still game invitational, but passable.\\
+	\cl3 & Maximum with 2\spadesuit, GF. Responder may show 2 suited hands LMH via the next 3 steps.\\
+	\di3 & Maximum with 3\spadesuit. Responder can bid 3NT to offer choice preferring NT, \sp3 to offer choice preferring spades, or \sp4 to sign off. Other bids are unusual, but possible with 2 suited hands.\\
+	\sp3 & Minimum, 3\spadesuit. Better than pass, not enough to commit to game.\\
+	3NT & Probably a 2-card maximum that forgot to bid \cl3. \\
+\end{bidtable}
 
-\orauction{1n,2c,2M,?}
-\begin{description}
-  \item[\sp2] (Over \he2). 5\spadesuit, invitational. Same followups as over 1NT-\cl2-\di2-\sp2.
-  \item[2NT] Invitiational. Promises 4 cards in OM.
-  \item[\cl3] 5+ \clubsuit ~OR 5+ \diamondsuit, GF. \di3 asks for the minor, LH. Other bids are natural, including bidding the other major to confirm a fit there.
-  \item[\di3] Artificial, confirms a fit in M, typically no shortness. Opener can bid 3M to suggest playing in M, 3NT to suggest playing there, or 4M to insist on M, denying slam interest. Other suit bids are cuebids with hands well suited for slam.
-  \item[3M] Invitational
-  \item[3OM] Unspecified splinter. Next step asks, LMH.
-  \item[3NT] To play
-  \item[\cl4] 4M, 6OM, slam try. Opener's 4OM rebid is an offer to play.
-  \item[\di4] RKC for M
-  \item[4NT] Quantitative
-\end{description}
+\begin{bidtable}{\orauction{1n,2c,2M,?}}
+	\sp2 & (Over \he2). 5\spadesuit, invitational. Same followups as over 1NT--\cl2--\di2--\sp2.\\
+	2NT & Invitiational. Promises 4 cards in OM.\\
+	\cl3 & 5+ \clubsuit ~OR 5+ \diamondsuit, GF. \di3 asks for the minor, LH. Other bids are natural, including bidding the other major to confirm a fit there.\\
+	\di3 & Artificial, confirms a fit in M, typically no shortness. Opener can bid 3M to suggest playing in M, 3NT to suggest playing there, or 4M to insist on M, denying slam interest. Other suit bids are cuebids with hands well suited for slam.\\
+	3M & Invitational\\
+	3OM & Unspecified splinter. Next step asks, LMH.\\
+	3NT & To play\\
+	\cl4 & 4M, 6OM, slam try. Opener's 4OM rebid is an offer to play.\\
+	\di4 & RKC for M\\
+	4NT & Quantitative \\
+\end{bidtable}
 
 \section{Jacoby Sequences}
 
+\subsection{1NT--\di2}
 1NT--\di2 shows 5+ \heartsuit, any strength. The only defined super-accept over this bid is \he3, which shows a maximum with 4+ \heartsuit.
 
 Over 1NT--\di2--\he2 we play "transfers over transfers", starting at 2NT. Most invitational sequences start with \sp2:
 
-\orauction{1n,2d,2h,?}
-\begin{description}
-  \item[\sp2] Artificial, shows an invitational hand with exactly 5 hearts OR 5+ \heartsuit, 5+ \spadesuit ~invitational or better.
-  \item[2NT] GF Transfer to \clubsuit. 5+ \heartsuit, 4+ \clubsuit
-  \item[\cl3] GF Transfer to \diamondsuit. 5+ \heartsuit, 4+ \diamondsuit
-  \item[\di3] Inv+, "Transfer" to \heartsuit ~showing good hearts. 6+ \heartsuit ~with 2 of top 3 honors
-  \item[\he3] Inv, 6+ \heartsuit. Denies 2 of top 3 heart honors.
-  \item[\sp3] Unspecified splinter slam try. 3NT relays for LMH. Neither promises nor denies 2 of top 3 heart honors.
-  \item[3NT] To play.
-  \item[\cl4] Slam try, 6+ \heartsuit, no shortness. Denies 2 of top 3 heart honors.
-  \item[\di4] RKC for \heartsuit.
-  \item[\he4] Mild slam try. \ari{I assume this is weaker than \cl4? Do we need this many balanced slam tries, especially since opener has a last train \di4 available? Does this also deny 2 of top 3 honors?}
-  \item[4NT] Quantitative with exactly 5 \heartsuit.
-\end{description}
+\begin{bidtable}{\orauction{1n,2d,2h,?}}
+	\sp2 & Artificial, shows an invitational hand with exactly 5 hearts OR 5+ \heartsuit, 5+ \spadesuit ~invitational or better.\\
+	2NT & GF Transfer to \clubsuit. 5+ \heartsuit, 4+ \clubsuit\\
+	\cl3 & GF Transfer to \diamondsuit. 5+ \heartsuit, 4+ \diamondsuit\\
+	\di3 & Inv+, "Transfer" to \heartsuit ~showing good hearts. 6+ \heartsuit ~with 2 of top 3 honors\\
+	\he3 & Inv, 6+ \heartsuit. Denies 2 of top 3 heart honors.\\
+	\sp3 & Unspecified splinter slam try. 3NT relays for LMH. Neither promises nor denies 2 of top 3 heart honors.\\
+	3NT & Choice of games.\\
+	\cl4 & Serious slam try, 6+ \heartsuit, no shortness. Denies 2 of top 3 heart honors.\\
+	\di4 & RKC for \heartsuit.\\
+	\he4 & Mild slam try. \\
+	& \ari{I assume this is weaker than \cl4? Do we need this many balanced slam tries, especially since opener has a last train \di4 available? Does this also deny 2 of top 3 honors?}\\
+	& \rem{I like having 2, but it might not be necessary.  Tweaked some wording to hopefully clarify: 4C is the serious try, 4M is more opener is allowed to bid on if they like their hand for slam.}\\
+	4NT & Quantitative with exactly 5 \heartsuit.\\
+\end{bidtable}
 
-Opener's responses over \sp2 are similar in nature to 1NT--\cl2--2X--\sp2:
+\begin{bidtable}{\orauction{1n,2d,2h,2s,?}}
+	& Opener's responses over \sp2 are similar in nature to 1NT--\cl2--2X--\sp2 \\
+	& \\
+	2NT & Minimum, 2\heartsuit\\
+	\cl3 & Maximum, 2\heartsuit\\
+	\di3 & Maximum, 3\heartsuit\\
+	\he3 & Minimum, 3+ \heartsuit\\
+	3NT & Does not exist.  Probably a 2-card maximum that forgot to bid \cl3. \\
+\end{bidtable}
 
-\orauction{1n,2d,2h,2s,?}
-\begin{description}
-  \item[2NT] Minimum, 2\heartsuit
-  \item[\cl3] Maximum, 2\heartsuit. GF
-  \item[\di3] Maximum, 3\heartsuit
-  \item[\he3] Minimum, 3+ \heartsuit
-  \item[3NT] DNE. Probably a 2-card maximum that forgot to bid \cl3
-\end{description}
+\begin{bidtable}{\orauction{1n,2d,2h,2s,2n,?}}
+	& Over 2NT, responder can show a 5-card minor or 5-5 majors with various strengths. \\
+	& \\
+	\cl3 & 5+ \heartsuit, 5+ \clubsuit, invitational \\
+	\di3 & 5+ \heartsuit, 5+ \diamondsuit, invitational \\
+	\he3 & 5+ \heartsuit, 5+ \spadesuit, invitational \\
+	\sp3 & 5+ \heartsuit, 5+ \spadesuit, GF without slam interest \\
+	3NT & 5+ \heartsuit, 5+ \spadesuit, GF with slam interest\\
+\end{bidtable}
 
-Over 2NT, responder can show a 5-card minor or 5-5 majors with various strengths.
+\begin{bidtable}{\orauction{1n,2d,2h,2s,3c,?}}
+	\di3/\he3/\sp3 & 5+ \heartsuit, 5+ second-suit, LMH\\
+	3NT & To play\\
+	4m & Cuebid with 5+ \heartsuit, 5+ \spadesuit\\
+\end{bidtable}
 
-\orauction{1n,2d,2h,2s,2n,?}
-\begin{description}
-  \item[\cl3] 5+ \heartsuit, 5+ \clubsuit, invitational.
-  \item[\di3] 5+ \heartsuit, 5+ \diamondsuit, invitational.
-  \item[\he3] 5+ \heartsuit, 5+ \spadesuit, invitational.
-  \item[\sp3] 5+ \heartsuit, 5+ \spadesuit, GF without slam interest.
-  \item[3NT] 5+ \heartsuit, 5+ \spadesuit, GF with slam interest.
-\end{description}
+\begin{bidtable}{\orauction{1n,2d,2h,2s,3d,?}}
+	\he3 & COG preferring \heartsuit\\
+	3NT & COG preferring NT\\
+	\he4 & To play\\
+\end{bidtable}
 
-\orauction{1n,2d,2h,2s,3c,?}
-\begin{description}
-  \item[\di3/\he3/\sp3] 5+ \heartsuit, 5+ second-suit, LMH
-  \item[3NT] to play
-  \item[4m] Cuebid with 5+ \heartsuit, 5+ \spadesuit
-\end{description}
-
-\orauction{1n,2d,2h,2s,3d,?}
-\begin{description}
-  \item[\he3] Choice of games preferring \heartsuit
-  \item[3NT] Choice of games preferring NT
-  \item[\he4] To play
-\end{description}
-
-\noindent\rule{\textwidth}{1pt}
-
+\subsection{1NT--\he2}
 
 1NT--\he2 shows 5+ \spadesuit, any strength.
 
@@ -136,24 +127,24 @@ Note that with exactly 5 spades and exactly invitational values we start with St
 
 As per hearts, we generally do not super accept. The only defined super accept is \sp3, showing a maximum with 4+ \spadesuit.
 
-Over 1NT--\he2--\sp2 we play transfers starting at 2NT:
+\begin{bidtable}{\orauction{1n,2h,2s,?}}
+	& Over 1NT--\he2--\sp2 we play transfers starting at 2NT \\
+	& \\
+	2NT & GF Transfer to \clubsuit. 5+ \spadesuit, 4+ \clubsuit\\
+	\cl3 & GF Transfer to \diamondsuit. 5+ \spadesuit, 4+ \diamondsuit\\
+	\di3 & Inv+, "Transfer" to \spadesuit ~showing good spades. 6+ \spadesuit ~with 2 of top 3 honors\\
+	\he3 & Unspecified splinter slam try. \sp3 relays for LMH. Neither promises nor denies 2 of top 3 spade honors\\
+	\sp3 & Inv, 6+ \spadesuit. Denies 2 of top 3 spade honors.\\
+	\cl4 & Slam try, 6+ \spadesuit, no shortness. Denies 2 of top 3 spade honors.\\
+	\di4 & RKC for \spadesuit.\\
+	\sp4 & Mild slam try.\\
+	4NT &  Quantitative with exactly 5 \spadesuit.	
+\end{bidtable}
 
-\orauction{1n,2h,2s?}
-\begin{description}
-  \item[2NT] GF Transfer to \clubsuit. 5+ \spadesuit, 4+ \clubsuit
-  \item[\cl3] GF Transfer to \diamondsuit. 5+ \spadesuit, 4+ \diamondsuit
-  \item[\di3] Inv+, "Transfer" to \spadesuit ~showing good spades. 6+ \spadesuit ~with 2 of top 3 honors
-  \item[\he3] Unspecified splinter slam try. \sp3 relays for LMH. Neither promises nor denies 2 of top 3 spade honors
-  \item[\sp3] Inv, 6+ \spadesuit. Denies 2 of top 3 spade honors.
-  \item[\cl4] Slam try, 6+ \spadesuit, no shortness. Denies 2 of top 3 spade honors.
-  \item[\di4] RKC for \spadesuit.
-  \item[\sp4] Mild slam try.
-  \item[4NT] Quantitative with exactly 5 \spadesuit.
-\end{description}
+1NT--\he2--\sp2--2N--\he3 shows 5 \heartsuit ~in an attempt to find a fit. 
+\rem{This is fine, although I know that Meckwell play +1 agrees the minor and +2 agrees the major with optional shortness follow ups by responder. That's probably a better structure long term.  Doesn't even preclude the 5 card OM necessarily, we could define 3S as always showing 5OM for example.}
 
-1NT--\he2--\sp2--2N--\he3 shows 5 \heartsuit ~in an attempt to find a fit.
-
-\section[2S Size Ask]{\sp2 Size Ask} %  This is not properly being added to Table of Contents
+\section[2S Size Ask]{\sp2 Size Ask}
 
 1NT--\sp2 is first and foremost a size ask, checking if opener has a minimum or a maximum. It also includes hands that would normally transfer to \clubsuit.
 
@@ -161,20 +152,27 @@ Opener must bid either 2NT with a minimum or \cl3 with a maximum. With an in-bet
 
 Note that you are allowed to bid \sp2 on a variety of hands, including quantitative slam tries as well as game tries.
 
-\orauction{1n,2s,2n/3\clubsuit,?}
-\begin{description}
-  \item[\cl3] To play \cl3
-  \item[\di3] 6+ \clubsuit, either balanced or diamond shortness. If balanced, should have some slam interest. \he3 asks for clarification, NL.
-  \item[\he3] 6+ \clubsuit, shortness in \heartsuit.
-  \item[\sp3] 6+ \clubsuit, shortness in \spadesuit.
-  \item[3NT] To play. Over 2NT, it is implied that responder had slam interest.
-  \item[\cl4] Gerber \ari{What responses?}
-  \item[\di4] RKC for \clubsuit.
-\end{description}
+\begin{bidtable}{\orauction{1n,2s,2n/3\clubsuit,?}}
+	\cl3 & To play \cl3 \\
+	\di3 & 6+ \clubsuit, either balanced or diamond shortness. If balanced, should have some slam interest. \he3 asks for clarification, NL. \\
+	\he3 & 6+ \clubsuit, shortness in \heartsuit.\\
+	\sp3 & 6+ \clubsuit, shortness in \spadesuit.\\
+	3NT & To play. Over 2NT, it is implied that responder had slam interest.\\
+	\cl4 & Gerber 1430 \sout{\ari{What responses?}}\\
+	\di4 & RKC for \clubsuit.\\
+\end{bidtable}
 
 \section{2NT Puppet Stayman}
 
-1NT--2NT is GF Puppet Stayman, asking for a 5-card major. We primarily use this bid when we don't have slam interest and want to assess what our best game option is,
+1NT--2NT is GF Puppet Stayman, asking for a 5-card major. We primarily use this bid when we don't have slam interest and want to assess what our best game option is.
+
+\begin{bidtable}{\orauction{1n,2n,?}}
+	\cl3 & No 5 card major.  Says nothing about 4 card majors.  \\
+	\di3 & 5 \heartsuit \\
+	\he3 & 5 \spadesuit \\
+	\sp3 & 4 \spadesuit + 5 \heartsuit \\
+	3NT & 5 \spadesuit + 4 \heartsuit \\
+\end{bidtable}
 
 
 \end{document}
