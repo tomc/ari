@@ -1,11 +1,34 @@
-\documentclass[tom-ari]{subfile}
+\documentclass[tom-ari]{subfiles}
 \begin{document}
 	
 	\chapter[1D]{\di1}
 	
-	Lorem Ipsum
-	
-	\lipsum[4]
+	\di1 is our catch-all opening bid for hands with no 5-card major and fewer than 6 clubs. The range is 10-15 HCP if unbalanced or 10-13 HCP if balanced. \di1 does not promise any diamonds at all; \exactshape{4405} hands are routinely opened \di1.  The following hand types are included in the \di1 opener.
+
+\begin{itemize}
+    \item 10-13 HCP balanced
+    \item 12-15 HCP, 6+ \diamondsuit
+    \item 10-15 HCP unbalanced, no 5-card major or 6-card minor
+\end{itemize}
+
+Like most of our system, we try to invite and get out as low as possible. The structure reflects this concept. We may lose some granularity in some auctions to support this style, but such is life.
+
+\begin{bidtable}{\orauction{1d,?}}
+        P & 0-9. It is routine to pass with up to 9 HCP and no 4-card major \\        
+        \he1 & 4+ \heartsuit, F1 \\
+	\sp1 & 4+ \spadesuit, F1 \\
+        1NT & 10-13 HCP, INV. No 4-card major \\
+        \cl2  &  10+ HCP, 5+ \clubsuit, F1 \\
+        \di2  &  10+ HCP, 5+ \diamondsuit, F1 \\
+        \he2 & Reverse Flannery, Non-invitational. 5+ \spadesuit, 4+ \heartsuit, typically 0-9 HCP \\
+        \sp2 & Reverse Flannery, INV. 5+ \spadesuit, 4+ \heartsuit, about 10-13 HCP \\
+        2NT & Natural, GF. No 4-card major. 14-16 HCP or 19+ \\
+        \cl3 & Natural, 6+ \clubsuit, Mixed  \ari{Can you add more detail about strength and minimum suit quality?} \\
+        \di3 & Natural, 6+ \diamondsuit, Mixed  \ari{Can you add more detail about strength and minimum suit quality?} \\
+       3M & "Scambled Splinter". Shortness in bid suit, at least 5-4 either way in the minors, GF. \\
+        3NT & 17-18 HCP Balanced \\
+\end{bidtable}
+
 	
 \end{document}
 
