@@ -38,6 +38,7 @@ No special agreements for opening bids 4NT and higher.
 
 \section{Relays}
 
+\subsection{TaJ}
 TaJ relay as it currently exists.  Used in both \cl1 auctions and 1M--\di2 auctions.
 
 \begin{description}
@@ -50,6 +51,82 @@ TaJ relay as it currently exists.  Used in both \cl1 auctions and 1M--\di2 aucti
 	\item[+6] \shape{6322} or \shape{7222}.  This may also explode into further descriptive items, such as cuebids.  \rem{Or new relays...} 
 \end{description}
 
+\subsection{CIRKLE}
+
+\Huge{\color{red}BETA}
+
+CIRKLE --- Carmichael's Improved Roman Keycard, Locating Everything
+
+\normalsize
+
+\rem{These notes are based on preliminary testing, the final form may still be different.}
+
+\begin{description}
+	\item[What] Replacement for RKC
+	\item[When] Typically after a suit is established but below game.
+	\item[How] Using slam points (RKC=3, Other=1), broken down into 5 buckets (mod 5) 
+\end{description}
+
+CIRKLE is a asking bid about the typical slam cards:  the 5 ``Aces'' that make up the typical RKC responses and the other 4 cards of primary interest:  the Queen of trumps and the 3 side Kings.
+
+At present, the KCs are worth 3 points each and the side cards are 1 each.  I'll call this your ``slam points''.
+
+When CIRKLE is used, responder computes his slam points and responds in one of 5 steps, each of those steps representing the slam points modulo 5. This is similar to RKC, which uses a modulo 3 system.  (0/3, 1/4, 2/5).  For us, the steps are simply increasing:  0/5/10/15, 1/6/11/16, 2/7/12/17, 3/8/13/18 and 4/9/14/19.
+
+While it may seem at first that having 4 possibilities is too many, the auction and your hand is going to immediately eliminate some of the possibilities.  The response to date in testing has always been no worse than 1 of 2.  While that too may seem daunting, we follow up CIRKLE with another asking sequence, SQUARE (see below).  That will uniquely identify the bucket as well as locate cards if they can't be seen.
+
+At present we do not zoom from the last step directly into SQUARE, but that may be considered going forward.
+
+\subsection{SQUARE}
+
+\Huge{\color{red}BETA}
+
+SQUARE --- Spiral Qbid Using Adaptive Relay Extensions
+
+\normalsize
+
+\rem{These notes are based on preliminary testing, the final form may still be different.}
+
+\begin{description}
+	\item[What] Series of asking bids/responses about holdings in all the suits
+	\item[When] After CIRKLE
+	\item[How] Stop/Go for each suit.  Even values are a ``stop'', odd values are a ``go'', reversed for singletons.  
+\end{description}
+
+SQUARE is an idea incorporated in a few other relay systems, notably the Moss/Grue agreements as well as a few other sources. 
+
+The idea is after a hand has been limited some how in terms of values (HCP, controls, ZZs, whatever) you have a mechanism to locate the exact honors.  For us, the limiting mechanism is CIRKLE - we identify the total slam points for the hand and then locate the honors specifically.
+
+The ``adaptive'' part of SQUARE is the order in which the suits are asked about is dynamic, based on what is known about responders length in suits.  Rather than having a strict LMH type order, the suits are ordered (ABCD) based on a few factors. Our priorities:
+
+\begin{enumerate}
+	\item Trump suit is always ``A''
+	\item Longer suits come before shorter suits. Lengths can be implied rather than specific.
+	\item Game Order: \heartsuit \spadesuit \clubsuit \diamondsuit
+\end{enumerate}
+
+I think for many partnerships employing these type methods the trump suit isn't necessarily known.  I also believe that they have a slightly different tie-breaker mechanisms.  Game order makes sense to me, as it may maximize the chance of being able to stop when you get bad responses.
+
+The ``spiral qbid'' part of SQUARE comes next.  After we have identified the suit order ABCD, the asker uses the next step to ask about the ``A'' suit.  Responder looks at the AKQ cards in the suit and responds with how many of the high honors do they have in an even/odd parity.  ``Even'', 0 or 2, is the Stop, bidding the very next step.  (We want to be able to slow the auction down if we get a zero response.)  If responder has an ``Odd'' response, this is a Go - they look at the B suit and do a Stop/Go evaluation of that.  A Stop would be bidding 1 above the next step (+2), a Go would have them look at the C suit, and so on.
+
+After all the suits have been asked about the top 3 cards, we revert to asking about the J for the 4 suits preserving the ABCD order.  Yes is Go, No is stop.  (Still odd/even).  Room permitting, asking for 10s, etc.
+
+One interesting aspect of SQUARE is how it Zooms.  Not only can responder ``Zoom'' after a Go response, but Asker can also ``Zoom'' the questions.  Skipping 1 step of square skips 1 suit in the ask.  This can be space preserving when Asker already knows the answer to the question.  The simplest example would be skipping a suit where asker held AKQ.
+
+``Sign off'' bids are not asks. These are pretty obvious, but listed below in the special cases.  One special note, if 4Maj is available for sign off then 5Maj would still be a step for asking.  It's only the lowest bid at a level (Game, Slams) that acts as sign off.
+
+A few special cases:  
+
+\begin{itemize}
+	\item When a suit is known to be exactly a singleton, the Go/Stop responses are inverted.  Generally speaking, having a high honor is less useful in a singleton than elsewhere, so the inverted response makes some sense.  Also the Q is ``demoted'', only the A or K are treated as honors.  The Q is shown as the J in that relay, with the J demoted and so on.
+	\item When a suit is known to be a void, there are no asking bids for that suit. (ABC only)
+	\item 3NT, 6NT, the cheapest level of the trump suit and slams in the trump suit are never asking bids.
+	\item Never respond to asking bids past 6NT
+	\item 5NT is also not an asking bid, it is a puppet to \cl6, then asker will place the contract.  Most commonly used if the presumed trump suit is not the actual final contract.
+\end{itemize}
+
+At present we need to have a specific asking bid launch into SQUARE.  We may incorporate a zoom into SQUARE coming from CIRKLE down the road.
+	
 \end{document}
 
 
