@@ -79,7 +79,7 @@ At present we do not zoom from the last step directly into SQUARE, but that may 
 
 \subsection{SQUARE}
 
-\Huge{\color{red}BETA}
+\Huge{\color{red}BETA v. 0.2}
 
 SQUARE --- Spiral Qbid Using Adaptive Relay Extensions
 
@@ -107,9 +107,9 @@ The ``adaptive'' part of SQUARE is the order in which the suits are asked about 
 
 I think for many partnerships employing these type methods the trump suit isn't necessarily known.  I also believe that they have a slightly different tie-breaker mechanisms.  Game order makes sense to me, as it may maximize the chance of being able to stop when you get bad responses.
 
-The ``spiral qbid'' part of SQUARE comes next.  After we have identified the suit order ABCD, the asker uses the next step to ask about the ``A'' suit.  Responder looks at the AKQ cards in the suit and responds with how many of the high honors do they have in an even/odd parity.  ``Even'', 0 or 2, is the Stop, bidding the very next step.  (We want to be able to slow the auction down if we get a zero response.)  If responder has an ``Odd'' response, this is a Go - they look at the B suit and do a Stop/Go evaluation of that.  A Stop would be bidding 1 above the next step (+2), a Go would have them look at the C suit, and so on.
+The ``spiral qbid'' part of SQUARE comes next.  After we have identified the suit order ABCD, the asker uses the next step to ask about the ``A'' suit.  Responder looks at the AKQ cards (for the ``A'' suit) or the AK cards (for ``BCD'') in the suit and responds with how many of the high honors do they have in an even/odd parity.  ``Even'', 0 or 2, is the Stop, bidding the very next step.  (We want to be able to slow the auction down if we get a zero response.)  If responder has an ``Odd'' response, this is a Go - they look at the B suit and do a Stop/Go evaluation of that.  A Stop would be bidding 1 above the next step (+2), a Go would have them look at the C suit, and so on.
 
-After all the suits have been asked about the top 3 cards, we revert to asking about the J for the 4 suits preserving the ABCD order.  Yes is Go, No is stop.  (Still odd/even).  Room permitting, asking for 10s, etc.
+After all the suits have been asked about the top 3 cards, we revert to asking about the Q for the BCD suits, then the J for the 4 suits preserving the ABCD order.  Yes is Go, No is stop.  (Still odd/even).  Room permitting, asking for 10s, etc.
 
 One interesting aspect of SQUARE is how it Zooms.  Not only can responder ``Zoom'' after a Go response, but Asker can also ``Zoom'' the questions.  Skipping 1 step of square skips 1 suit in the ask.  This can be space preserving when Asker already knows the answer to the question.  The simplest example would be skipping a suit where asker held AKQ.
 
@@ -118,10 +118,10 @@ One interesting aspect of SQUARE is how it Zooms.  Not only can responder ``Zoom
 A few special cases:  
 
 \begin{itemize}
-	\item When a suit is known to be exactly a singleton, the Go/Stop responses are inverted.  Generally speaking, having a high honor is less useful in a singleton than elsewhere, so the inverted response makes some sense.  Also the Q is ``demoted'', only the A or K are treated as honors.  The Q is shown as the J in that relay, with the J demoted and so on.
+	\item When a suit is known to be exactly a singleton, the Go/Stop responses are inverted.  Generally speaking, having a high honor is less useful in a singleton than elsewhere, so the inverted response makes some sense. 
 	\item When a suit is known to be a void, there are no asking bids for that suit. (ABC only)
 	\item 3NT, 6NT, the cheapest level of the trump suit and slams in the trump suit are never asking bids.
-	\item Never respond to asking bids past 6NT
+	\item 6NT is a hard stop, never make a response above 6NT.  
 	\item 5NT is also not an asking bid, it is a puppet to \cl6, then asker will place the contract.  Most commonly used if the presumed trump suit is not the actual final contract.
 \end{itemize}
 
