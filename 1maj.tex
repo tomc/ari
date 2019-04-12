@@ -3,10 +3,61 @@
 	
 	\chapter{1 Major}
 	
-	Lorem Ipsum
+	\Huge{\color{red}ALPHA v. 0.1}
 	
-	\lipsum[4]
+	\section{Intro}
 	
+	\normalsize 
+	
+	This version of responses over 1 Maj is still experimental.  It will be step based and a bit more relay based.  While a TaJ like relay will be part of the system, there will be some differences in what hands the responder may have.  It might a prelude to a general GF relay as opposed to a fit.  I don't know if this will have limitations in practice, but it seems worth testing.
+	
+	\section{Step summary} 
+	
+	The bids between the opening bid (1M) and the simple raise (2M) are coded into a step based structure.  The idea is to have a (semi)forcing NT equivalent, a relay and the ability to GF in any suit directly.  This overloads the relay response slightly.
+	
+	\begin{description}
+		\item[+1] (Semi)Forcing NT.  Truly forcing in the case of \he1--\sp1, semi-forcing for \sp1--1NT.
+		\item[+2] TaJ.  Responder has 1 of 3 hand types: LR+, GF bal or GF in clubs.
+		\item[+3] GF in D.  This is natural over spades and a transfer over hearts.
+		\item[+4] GF in OM.  Natural over spades, \di2 to show spades over hearts.
+		\item[2NT] 5-5 minors, Inv+.  Open to other meanings if useful.
+		\item[3NT] ?  CIRKLE?
+		\item[Other] Not changing.  For example, a jump to \cl3 is still a natural invitation, void splinters, etc.
+	\end{description}
+
+	\section{+1}
+	
+	This step has some slight differences depending on the major, simply because \he1--\sp1 can't be passed, while \sp1--1NT can.
+	
+	Responses to \sp1--1NT are going to be natural and not change from current agreements:
+	
+	\begin{bidtable}{\orauction{1s,1n}}
+		Pass & Balanced hand not interested in game. \\
+		\cl2 & Clubs, typically 4+ but can be short if non-minimum. \\
+		\di2 & Diamonds, typically 4+ but can be short if non-minimum and \exactshape{5332}. \\
+		\he2 & Hearts, always 4+ \\
+		\sp2 & 6+ Spades, not enough to jump to \sp3. \\
+		2NT & 6--4 jump shift, \cl3 is pass or correct, \di3 is asking LMH. \\
+		3x & 5--5 jump shift, non-forcing.\\
+		\sp3 & 6+ Spades, maximum\\
+	\end{bidtable}
+
+	Responses to \he1--\sp1 are artificial, mostly.  This is in part to allow for showing 4 spades and partially to take advantage of the space.  Because the ``pass'' response isn't an option any more, something needs to be overloaded.  For now I've chosen \cl2 as the culprit, but that might not be best.
+	
+	\begin{bidtable}{\orauction{1h,1s}}
+		1NT & Balanced minimum, non-forcing. \\
+		\cl2 & Balanced non-minimum or a real minor.  \di2 is non-forcing, a correction to \he2 shows clubs instead. \sp2 is artificial and asks for hand type, inv+. Resp to \sp2: 2NT is balanced (and GF), 3m is NF, 3M is LH GF. \\
+		\di2 & Spades, always 4+.  Rarely more than 4, would imply 6 hearts and not enough to reverse. Can be a 4--6 good hand, planning on rebidding \he3 next.  (i.e., not included in 2NT below) \\
+		\he2 & Natural rebid \\
+		2NT & 6--4 jump shift, always a 4 card minor.  \cl3 is pass or correct, \di3 asks LH. \\
+		\sp2 & 5--6 reverse, NF \\
+		3m & 5--5 jump shift, NF \\
+		\he3 & 6+ hearts, maximum \\
+	\end{bidtable}
+
+
+		
+		
 \end{document}
 
 
