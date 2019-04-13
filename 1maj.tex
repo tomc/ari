@@ -3,7 +3,7 @@
 	
 	\chapter{1 Major}
 	
-	\Huge{\color{red}ALPHA v. 0.1}
+	\Huge{\color{red}ALPHA v. 0.2}
 	
 	\section{Intro}
 	
@@ -19,16 +19,15 @@
 		\item[+1] (Semi)Forcing NT.  Truly forcing in the case of \he1--\sp1, semi-forcing for \sp1--1NT.
 		\item[+2] TaJ.  Responder has 1 of 3 hand types: LR+, GF bal or GF in clubs.
 		\item[+3] GF in D.  This is natural over spades and a transfer over hearts.
-		\item[+4] GF in OM.  Natural over spades, \di2 to show spades over hearts.
-		\item[2NT] 5-5 minors, Inv+.  Open to other meanings if useful.
-		\item[3NT] ?  CIRKLE?
+		\item[+4] OM.  GF \& natural over \sp1, \di2 to show Inv+ spades over \he1.
+		\item[2NT] 5-5 minors, Inv+.  Open to other meanings if useful. Not sure best strength either, Mixed may be better.
+		\item[3NT] \rem{Note} Bal with M, choice of games.  No slam interest.
 		\item[Other] Not changing.  For example, a jump to \cl3 is still a natural invitation, void splinters, etc.
 	\end{description}
 
 	\section{+1}
 	
 	This step has some slight differences depending on the major, simply because \he1--\sp1 can't be passed, while \sp1--1NT can.
-	
 	Responses to \sp1--1NT are going to be natural and not change from current agreements:
 	
 	\begin{bidtable}{\orauction{1s,1n}}
@@ -42,12 +41,13 @@
 		\sp3 & 6+ Spades, maximum\\
 	\end{bidtable}
 
-	Responses to \he1--\sp1 are artificial, mostly.  This is in part to allow for showing 4 spades and partially to take advantage of the space.  Because the ``pass'' response isn't an option any more, something needs to be overloaded.  For now I've chosen \cl2 as the culprit, but that might not be best.
+	Responses to \he1--\sp1 are artificial, mostly.  This is in part to allow for showing 4 spades and partially to take advantage of the space.  Because the ``pass'' response isn't an option any more, something needs to be overloaded.  For now I've chosen \cl2 as the culprit, but that might not be best.  \rem{Note} It did occur to me later that the 1NT bid should be all 10--13 bal, no reason to play it the way I originally had.  If responder has an invite, they can invite.  Wild concept.
 	
 	\begin{bidtable}{\orauction{1h,1s}}
-		1NT & Balanced minimum, non-forcing. \\
-		\cl2 & Balanced non-minimum or a real minor.  \di2 is non-forcing, a correction to \he2 shows clubs instead. \sp2 is artificial and asks for hand type, inv+. Resp to \sp2: 2NT is balanced (and GF), 3m is NF, 3M is LH GF. \\
-		\di2 & Spades, always 4+.  Rarely more than 4, would imply 6 hearts and not enough to reverse. Can be a 4--6 good hand, planning on rebidding \he3 next.  (i.e., not included in 2NT below) \\
+		1NT & Balanced \sout{minimum,} 10--13, non-forcing. \\
+		\cl2 & \sout{Balanced non-minimum} 4+ in either minor.  \di2 is non-forcing, a correction to \he2 shows clubs instead. \sp2 is artificial and asks for hand type, inv+. \\
+		 & Resp to \sp2: See below.  \sout{2NT is balanced (and GF), 3m is NF, 3M is LH GF.} \\
+		\di2 & Spades, always 4+.  Rarely more than 4, would imply 6 hearts and not enough to reverse. Can be a 4--6 good hand, planning on rebidding \he3 next.  (i.e., not included in 2NT below) Includes \shape{5440} Flannery hands\\
 		\he2 & Natural rebid \\
 		2NT & 6--4 jump shift, always a 4 card minor.  \cl3 is pass or correct, \di3 asks LH. \\
 		\sp2 & 5--6 reverse, NF \\
@@ -55,8 +55,41 @@
 		\he3 & 6+ hearts, maximum \\
 	\end{bidtable}
 
+	\begin{bidtable}{\orauction{1h,1s,2c,2s}}
+		2NT & GF with \exactshape{x5x4}.  \cl3 relays for shape, NLHV. Void step is \exactshape{0544} \\
+		3m & Natural min, 4+ in m. +1 GF relay for shortness NLH \\
+		\he3 & GF with \exactshape{2542} (None) \\
+		\sp3 & GF with \exactshape{3541} (Low) \\
+		3NT & GF with \exactshape{1543} (High) \\
+    \end{bidtable}
 
-		
+	\section{+2}
+	
+	This is the primary relay step.  It is inheriting the response structure from TaJ, but doesn't guarantee a fit the way TaJ does.  It is intended to be general purpose, which makes the bid mostly fall into 1 of 3 hand types:  a classic TaJ hand (LR+), any GF bal or other that feels like relaying, any GF in clubs.  The club hand can be shown by breaking relay and bidding \cl3. The only danger is that partner bids an \"Uber step 2NT or higher, but we are likely in a slam position so it may not matter much.
+	
+	The responses are as per TaJ, shifted down.  1st step is any min, 2nd step is any medium ``I would accept a LR'' type hand, steps above that are \"Uber good and break into TaJ steps.
+	
+	Over the more common +1/+2 responses, retreating to 2M is the weakest action, showing the LR type hand.  In the case of +2, this becomes the ``Are you sure?'' bid instead of raising to the 3 level.
+	
+	The cheapest bid that isn't 2M is the TaJ relay, as per 2NT in the old system.  Once we have TaJed fully, we can advance into CIRKLE/SQUARE. 3NT is never an asking bid in relay auctions, it is always an attempt to play there. As in other auctions, when space is tight for CIRKLE then \cl4 becomes a puppet for any remaining CIRKLEs that can't be bid directly, \di4 is a puppet to sign off anywhere, and direct game bids are NF but encouraging.
+
+	An relay-then-3NT auction loses it's previous meaning of a Choice of Games, so the direct 1M--3NT responses have become that. The new meaning of relay-then-3NT is simply no slam interest opposite partner's strength, NF.
+	
+	\section{+3}
+	
+	GF with 5+ diamonds.  You can choose to relay instead of showing diamonds, this is up to the responder.  No special responses at the moment.
+	
+	\section{+4}
+	
+	OM.  \sp1--\he2 is GF, \he1--\di2 is Inv+.  No structure at this time, one is likely coming.
+	
+	\section{2NT}
+	
+	Both minors?  Really a place holder agreement, I'm open to anything.  Not sure if Inv+ makes the most sense, perhaps Mixed is better.  Other meanings might be better still, but I'm currently at a loss for finding a ``good'' use for this bid.
+	
+	\section{3NT}
+	
+	Choice of games, promises 3 card support for M.
 		
 \end{document}
 
