@@ -54,23 +54,23 @@ TaJ relay as it currently exists.  Used in both \cl1 auctions and 1M--[+2] aucti
 
 \subsection{CIRKLE}
 
-CIRKLE --- Carmichael's Improved Roman Keycard, Locating Everything
-
+CIRKLE --- Carmichael's Improved Roman Keycard, Locating Everything (version 2.0)
+ 
 \normalsize
 
-\rem{These notes are based on preliminary testing, the final form may still be different.}
+\rem{Updated CIRKLE. KCs down to 2, using a mod 4 instead of mod 5. Hopefully more compressed to allow better space usage. This is closer to classical controls with KCs (K and Q) getting a bonus. Also, ABCD order tweaked from Game Order to Up-The-Line. (Noted in SQUARE)}
 
 \begin{description}
 	\item[What] Replacement for RKC
 	\item[When] Typically after a suit is established but below game.
-	\item[How] Using slam points (RKC=3, Other=1), broken down into 5 buckets (mod 5) 
+	\item[How] Using slam points (RKC=2, Other=1), broken down into 5 buckets (mod 4) 
 \end{description}
 
 CIRKLE is a asking bid about the typical slam cards:  the 5 ``Aces'' that make up the typical RKC responses and the other 4 cards of primary interest:  the Queen of trumps and the 3 side Kings.
 
-At present, the KCs are worth 3 points each and the side cards are 1 each.  I'll call this your ``slam points''.
+At present, the KCs are worth 2 points each and the side cards are 1 each.  I'll call this your ``slam points''.
 
-When CIRKLE is used, responder computes his slam points and responds in one of 5 steps, each of those steps representing the slam points modulo 5. This is similar to RKC, which uses a modulo 3 system.  (0/3, 1/4, 2/5).  For us, the steps are simply increasing:  0/5/10/15, 1/6/11/16, 2/7/12/17, 3/8/13/18 and 4/9/14/19.
+When CIRKLE is used, responder computes his slam points and responds in one of 4 steps, each of those steps representing the slam points modulo 4. This is similar to RKC, which uses a modulo 3 system.  (0/3, 1/4, 2/5).  For us, the steps are simply increasing:  0/4/8/12, 1/5/9/13, 2/6/10/14, 3/7/11. (Max is 14.)
 
 While it may seem at first that having 4 possibilities is too many, the auction and your hand is going to immediately eliminate some of the possibilities.  The response to date in testing has always been no worse than 1 of 2.  While that too may seem daunting, we follow up CIRKLE with another asking sequence, SQUARE (see below).  That will uniquely identify the bucket as well as locate cards if they can't be seen.
 
@@ -105,10 +105,10 @@ The ``adaptive'' part of SQUARE is the order in which the suits are asked about 
 \begin{enumerate}
 	\item Trump suit is always ``A''
 	\item Longer suits come before shorter suits. Lengths can be implied rather than specific.
-	\item Game Order: \heartsuit \spadesuit \clubsuit \diamondsuit
+	\item Up The Line: \clubsuit \diamondsuit \heartsuit \spadesuit 
 \end{enumerate}
 
-I think for many partnerships employing these type methods the trump suit isn't necessarily known.  I also believe that they have a slightly different tie-breaker mechanisms.  Game order makes sense to me, as it may maximize the chance of being able to stop when you get bad responses.
+I think for many partnerships employing these type methods the trump suit isn't necessarily known.  I also believe that they have a slightly different tie-breaker mechanisms.  \rem{Game order proved to be cumbersome for minors, we risked going past game too frequently. The ability to stop in 5 of a major makes up the line likely better. Worth testing.}
 
 The ``spiral qbid'' part of SQUARE comes next.  After we have identified the suit order ABCD, the asker uses the next step to ask about the ``A'' suit.  Responder looks at the AKQ cards (for the ``A'' suit) or the AK cards (for ``BCD'') in the suit and responds with how many of the high honors do they have in an even/odd parity.  ``Even'', 0 or 2, is the Stop, bidding the very next step.  (We want to be able to slow the auction down if we get a zero response.)  If responder has an ``Odd'' response, this is a Go - they look at the B suit and do a Stop/Go evaluation of that.  A Stop would be bidding 1 above the next step (+2), a Go would have them look at the C suit, and so on.
 
