@@ -8,14 +8,12 @@
 	\cl1 is our general forcing opening, showing roughly 17+ HCP balanced or 16+ unbalanced.  The new ACBL convention charts allow for as low as 14 HCP for a forcing bid so long as it meets the rule of 24.  (i.e., 10 cards in 2 suits).  I don't know how much we will take advantage of the new rule, but it is worth noting.
 	
 	Like all strong club systems, the strength of the system lies not within the \cl1 opening itself but rather allowing for all other openers to be limited.  While we have some special sequences which allow for \"{u}ber max in TaJ sequences, most of our simple 1 level openings are going to be lighter than most people open.  All of our invitational and competitive decisions revolve around that fact.  This can be a factor in deciding between \cl1 and 1M, for example.
-		
-	\Huge{\color{red}BETA}
-		
-	New Response Structure
 	
+	\Huge{\color{red}ALPHA}
+		
 	\normalsize
 	
-	(28 Nov 19) I've advanced these responses to Beta status. We've had some success with them so far, I expect we aren't changing them near term. Having better shape definitions aids for CIRKLE/SQUARE style relays.  Confirmed the Club/Diamond split by PH using \he1.
+	\rem{(8 Jan 20) Modifying the previous BETA notes, these are ideas I've bounced off Jenni. It's a combination of the old and new ideas; less exact shape relays, but more strength bids and CIRKLE tie ins. Writing this up to kick off discussion, can always be reverted in GIT if need be.}
 	
 	\begin{bidtable}{\orauction{1c,?}}
 		\di1 & No change, still negative. \\
@@ -25,49 +23,40 @@
 		1NT & 5+ Spades unbal, no extras.  \cl2 TaJ, \sp2 is natural clubs. \\
 		\cl2 & (UPH) Clubs or Diamonds.  \di2 asks suit with LH \& zoom into TaJ with \diamondsuit\\
 		\cl2 & (PH) Diamonds. \di2 TaJ. \\
-		\di2 & 4 \heartsuit without 4 \spadesuit.\\
-		\he2 & 4 \spadesuit without 4 \heartsuit. \\
-		\sp2 & 44 Majors \\
-		2NT & \shape{5332} \clubsuit, R for LMH doubleton.\\ 
-		\cl3 & \shape{5332} \diamondsuit, R for LMH doubleton \\
-		\di3 & \exactshape{3244}:  Memory aid, low suit is short. \\
-		\he3 & \exactshape{2344} \\
-		\sp3 & \exactshape{3334} \\
-		3NT & \exactshape{3343} \\
+		\di2 & 4 \heartsuit bal\\
+		\he2 & 4 \spadesuit without 4 \heartsuit, bal \\
+		\sp2 & No 4 card major, balanced \\
+		2NT & \exactshape{1444} \\ 
+		\cl3 & \exactshape{4441} (bid sing)\\
+		\di3 & \exactshape{4414} (bid sing)\\
+		\he3 & \exactshape{4144} (bid sing)\\
+		\sp3 & ``Gambling'' hand, AKQxxxx or better. Typically no side cards. \\
+		3NT--\he4 & 8+ card transfers, bust hand. No A or K. \\	
 	\end{bidtable}
 
 	Over \he1 response, \sp1 relay/waiting with all bids 1NT an higher as per direct.  (This is why \sp1 is unlimited and has the extra values step.)
 	
-	Over \di2/\he2, relay for shape. Table below is for both. 
+	\rem{Changes are to \di2 and higher. Balanced hands bid \di2, \he2 or \sp2 depending on majors. This is the same structure as the old system of \cl1--\sp1--1nt\ldots  Responses to bids are different.}
 	
-	\begin{bidtable}{\orauction{1c,2d,2h,?}}
-		+1 & \shape{5332}, relay for LMH doubleton. \\
-		+2 & \shape{4432} with clubs, relay LH for doubleton \\
-		+3 & \shape{4432} with diamonds, relay LH for doubleton \\
-		+4 & \shape{4333}	\rem{fixed}	\\
-		+5 & \shape{4441} (short OM) \\
+	\begin{bidtable}{\orauction{1c,2d,?}}
+		\he2 & Agrees \heartsuit, asks CIRKLE. \rem{See changes to CIRKLE.} \\
+		\sp2 & Shows 4+ spades, asks for support. 2NT by responder shows 4+ \spadesuit, over which \cl3 is CIRKLE. Bids above 2NT are suitless CIRKLE responses. \\
+		2NT & Denies a major, suitless CIRKLE responses. \\
+		\cl3--\di3 & Natural \\
+		\he3 & No slam interest, 4 \heartsuit, choice of games. \\
+		\sp3 & No slam interest, exactly 4 \spadesuit, COG.  Rarely used. \\
+		3NT & To play \\
 	\end{bidtable}
 
-	Over \sp2, relay for shape.
-	
-	\begin{bidtable}{\orauction{1c,2s,2n}}
-		\cl3 & \exactshape{4432}\\
-		\di3 & \exactshape{4423}\\
-		\he3 & \exactshape{4441}\\
-		\sp3 & \exactshape{4414}\\
+	\begin{bidtable}{\orauction{1c,2h,?}}
+		\sp2 & Agrees \spadesuit, asks CIRKLE. \\
+		2NT & Denies a fit, suitless CIRKLE \\
+		\cl3--\he3 & Natural \\
+		\sp3 & No slam interest, exactly 4 \spadesuit, COG \\
+		3NT & To play \\
 	\end{bidtable}
 
-	\rem{Updated!}
-
-	Tying this into CIRKLE:  Once the shape is known, steps below 3NT are CIRKLE in ABCD order. \cl4 is a puppet to \di4, then CIRKLE for any remaining ABCD that could not be bid below 3NT.  \di4 is a puppet to \he4 for sign off anywhere. \di4 to 4NT is a bail to RKC, skipping CIRKLE/SQUARE.
-	
-	Example
-	
-	\orauction{1c,2d,2h,2n,3c,3d} 
-	
-	shows \exactshape{3424}. \he3 and \sp3 are AB CIRKLE.  3NT is sign off, \cl4 puppets for CD CIRKLE. \di4 puppets to sign off anywhere (Not NT, since 3NT was available. Don't ask me what 4NT is.)
-	
-	Direct jumps to game, such as \he4, would be encouraging but NF.  To sign off strictly go through \di4.
+	Over 4x1 bids, every suit can be agreed below game. 3NT to play, agreeing a suit triggers CIRKLE for that suit.
 	
 	\section[1C--1D]{\cl1--\di1}
 	
