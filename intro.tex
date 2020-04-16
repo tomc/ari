@@ -16,7 +16,7 @@ The latest version of this file should be available at \url{https://github.com/t
 
 Throw some text as a test
 
-\orauction{1c,1s,1n,2c,2d,?}
+\orauction{1c,1s,1n,2c,2d}
 
 You can reference bids such as \cl{1} \di{2} \he{3} or \sp{4} inline, or even cards such as \clubs{A} \diamonds{K} \hearts{Q} \spades{J}. This can be expanded to suit holdings such as \spades{AKxx}.
 
@@ -33,7 +33,7 @@ I've added a new environment, bidtable.  It's similar to tabular so uses \& to s
 
 Sample:
 
-\begin{bidtable}{\orauction{1c,1d,7n,?}}
+\begin{bidtable}{\orauction{1c,1d,7n\underline{}}}
 	Pass & expected action \\
 	XX & automatic if doubled \\
 \end{bidtable}

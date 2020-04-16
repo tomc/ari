@@ -605,9 +605,35 @@ West&North&East&South\\%
 \end{tabular}%
 }
 
+% Copy and slightly modify genauction to create comp bidding modeled after 
+% orauction
+
+\newcommand{\gencomp}[3][NoShow]{%
+	\noindent%
+	\gdef \seat@counter {0}
+	\hspace{.5\auctionhspace}
+	\begin{tabular}{@{}p{8em}p{8em}p{8em}p{8em}}%
+		Opener&Overcaller&Responder&Advancer\\%
+		\IfEq{#1}{NoShow}{}{%
+			\@for \thislabel:=#1 \do {\textit{\thislabel} \incrementcounter}%
+			\IfEq{\seat@counter}{0}{}{\gdef seat@counter {0} \\}%
+		}%
+		\edef\long@auction{#2#3}%
+		\@bwLength{\long@auction}%
+		\setcounter{auctionLoopCounter}{1}%
+		\@for \thisbid:=\long@auction  \do {\printable{\thisbid} \ifnum\value{auctionLoopCounter} < \value{bwListLength}\incrementcounter\else\relax\fi\stepcounter{auctionLoopCounter} }%
+	\end{tabular}%
+}
 
 
-
+%compauct added by TomC for Titles being Opener/Responder
+\newcommand{\compauct}[2][NoShow]{%
+	% vspace and hspace removed to properly create boxes
+	% most of the logic is in \gencomp
+	\par\noindent%
+	\gencomp[#1]{#2}{,?}%
+	\par\@afterindentfalse\@afterheading%       preventing indent afterwards
+}
 
 %AUCTION
 
@@ -707,7 +733,7 @@ WEST&EAST\\%
 
 %ORAUCTION added by TomC for Titles being Opener/Responder
 \newcommand{\orauction}[2][NoShow]{%
-	\noindent%
+	\par\noindent%
 	\gdef \seat@counter {0} %GDEF not DEF is important, otherwise it can't see the counter inside-vs-outside the for loop
     \hspace{\auctionhspace}
 	\begin{tabular}{@{}p{\ewauctionspace}p{\ewauctionspace}}
@@ -717,8 +743,11 @@ WEST&EAST\\%
 			\IfEq{\seat@counter}{0}{}{\gdef seat@counter {0} \\}%
 		}%
 		\@for \thisbid:=#2  \do {\printable{\thisbid} \twopersoncounter }
+		? \\
 	\end{tabular}
+	\par\@afterindentfalse\@afterheading%       preventing indent afterwards
 }
+
 
 \newcommand{\twopersoncounter}{%
 \IfStrEqCase{\seat@counter}{{0}{%
