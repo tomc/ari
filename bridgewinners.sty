@@ -611,8 +611,8 @@ West&North&East&South\\%
 \newcommand{\gencomp}[3][NoShow]{%
 	\noindent%
 	\gdef \seat@counter {0}
-	\hspace{.5\auctionhspace}
-	\begin{tabular}{@{}p{8em}p{8em}p{8em}p{8em}}%
+	\hspace{.2\auctionhspace}
+	\begin{tabularx}{.75\textwidth}{XXXX}%
 		Opener&Overcaller&Responder&Advancer\\%
 		\IfEq{#1}{NoShow}{}{%
 			\@for \thislabel:=#1 \do {\textit{\thislabel} \incrementcounter}%
@@ -622,7 +622,7 @@ West&North&East&South\\%
 		\@bwLength{\long@auction}%
 		\setcounter{auctionLoopCounter}{1}%
 		\@for \thisbid:=\long@auction  \do {\printable{\thisbid} \ifnum\value{auctionLoopCounter} < \value{bwListLength}\incrementcounter\else\relax\fi\stepcounter{auctionLoopCounter} }%
-	\end{tabular}%
+	\end{tabularx}%
 }
 
 
