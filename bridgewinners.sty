@@ -612,7 +612,16 @@ West&North&East&South\\%
 	\noindent%
 	\gdef \seat@counter {0}
 	\hspace{.2\auctionhspace}
-	\begin{tabularx}{.75\textwidth}{XXXX}%
+% This was tabularx, but it created a weird bug that added a \\ after the 2nd element for reasons 
+% that aren't clear. Replacing it back with tabular fixed it, but then I needed to guesstimate
+% the column sizes. 6.8em seems fine, but perhaps that might not be true if the page size changes.
+%
+% tabular* allows for \textwidth, but seems cumbersome and recommended to avoid.
+%
+% Reading more, it seems that tabularx can add a line break when it thinks it needs to do so,
+% which seems to break what I was trying to do.
+%
+		\begin{tabular}{@{}p{6.8em}p{6.8em}p{6.8em}p{6.8em}}
 		Opener&Overcaller&Responder&Advancer\\%
 		\IfEq{#1}{NoShow}{}{%
 			\@for \thislabel:=#1 \do {\textit{\thislabel} \incrementcounter}%
@@ -622,11 +631,11 @@ West&North&East&South\\%
 		\@bwLength{\long@auction}%
 		\setcounter{auctionLoopCounter}{1}%
 		\@for \thisbid:=\long@auction  \do {\printable{\thisbid} \ifnum\value{auctionLoopCounter} < \value{bwListLength}\incrementcounter\else\relax\fi\stepcounter{auctionLoopCounter} }%
-	\end{tabularx}%
+		\end{tabular}
 }
 
 
-%compauct added by TomC for Titles being Opener/Responder
+%compauct added by TomC
 \newcommand{\compauct}[2][NoShow]{%
 	% vspace and hspace removed to properly create boxes
 	% most of the logic is in \gencomp
