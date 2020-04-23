@@ -621,8 +621,8 @@ West&North&East&South\\%
 % Reading more, it seems that tabularx can add a line break when it thinks it needs to do so,
 % which seems to break what I was trying to do.
 %
-		\begin{tabular}{@{}p{6.8em}p{6.8em}p{6.8em}p{6.8em}}
-		Opener&Overcaller&Responder&Advancer\\%
+		\begin{tabular}{@{}p{6.8em}p{6.8em}p{6.8em}p{6.8em}@{}}
+			Opener&Overcaller&Responder&Advancer\\%
 		\IfEq{#1}{NoShow}{}{%
 			\@for \thislabel:=#1 \do {\textit{\thislabel} \incrementcounter}%
 			\IfEq{\seat@counter}{0}{}{\gdef seat@counter {0} \\}%
