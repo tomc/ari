@@ -1,0 +1,87 @@
+\documentclass[]{memoir}
+\usepackage[margin=.2\textwidth]{geometry}
+\usepackage{graphicx, tikz}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmainfont{DejaVu Serif}
+\setmathfont{DejaVu Serif}
+
+\setstocksize{11.25in}{17.5in} % Lulu wants 17.474in or ~ 17.5
+% Lulu:  Spine width = .224in
+% textwidth = 477.89708 pt
+
+
+\begin{document}
+
+\thispagestyle{empty}
+\newgeometry{top=0cm, bottom=0cm, left=0cm,right=0cm}
+\begin{figure}[ht]
+%	\centering
+	\begin{tikzpicture}[scale=1] % was .85
+	
+
+	
+	\path[fill=white] (9.5in,-20) to[out=45,in=270] (12.5in,10) -- (9.5in,10);
+  \path[fill=white] (8in,-20) to[out=135,in=270] (5in,10) -- (8in,10); 
+  
+	\path[fill=white!75!teal] (9.5in,-20) to[out=50,in=270] (12in,10) -- (9.5in,10);
+	\path[fill=white!75!teal] (8in,-20) to[out=130,in=270] (5.5in,10) -- (8in,10);
+	
+	
+	\path[fill=white!50!teal] (9.5in,-20) to[out=55,in=270] (11.5in,10) -- (9.5in,10);
+	\path[fill=white!50!teal] (8in,-20) to[out=125,in=270] (6in,10) -- (8in,10);
+	
+	
+	\path[fill=green!67!blue] (9.5in,-20) to[out=60,in=270] (11in,10) -- (9.5in,10);
+	\path[fill=green!67!blue] (8in,-20) to[out=120,in=270] (6.5in,10) -- (8in,10);
+	
+	
+	\path[fill=teal!75!black] (9.5in,-20) to[out=65,in=270] (10.5in,10) -- (9.5in,10);
+	\path[fill=teal!75!black] (8in,-20) to[out=115,in=270] (7in,10) -- (8in,10);
+	
+	
+	\path[fill=black!60!teal] (9.5in,-20) to[out=70,in=270] (10in,10) -- (9.5in,10);
+	\path[fill=black!60!teal] (8in,-20) to[out=110,in=270] (7.5in,10) -- (8in,10);
+	
+	
+	\path[fill=white] (9.5in,-20) to[out=45,in=180] (17.5in,-4.5) -- (17.5in,-15);
+	\path[fill=white] (8in,-20) to[out=135,in=0] (0in,-4.5) -- (0in,-15);
+	
+	
+	\path[fill=white!75!teal] (9.5in,-20) to[out=40,in=180] (17.5in,-6.5) -- (17.5in,-15);
+	\path[fill=white!75!teal] (8in,-20) to[out=140,in=0] (0in,-6.5) -- (0in,-15);
+
+
+	\path[fill=white!50!teal] (9.5in,-20) to[out=35,in=180] (17.5in,-8.5) -- (17.5in,-15);
+	\path[fill=white!50!teal] (8in,-20) to[out=145,in=0] (0in,-8.5) -- (0in,-15);
+
+
+	\path[fill=green!67!blue] (9.5in,-20) to[out=35,in=180] (17.5in,-10.5) -- (17.5in,-15);
+	\path[fill=green!67!blue] (8in,-20) to[out=145,in=0] (0in,-10.5) -- (0in,-15);
+	
+	
+	\path[fill=teal!75!black] (9.5in,-20) to[out=30,in=180] (17.5in,-12.5) -- (17.5in,-15);
+	\path[fill=teal!75!black] (8in,-20) to[out=150,in=0] (0in,-12.5) -- (0in,-15);
+	
+	
+	\path[fill=black!60!teal] (9.5in,-20) to[out=25,in=180] (17.5in,-14.5) -- (17.5in,-20) -- (9.5in,-20);
+	\path[fill=black!60!teal] (8in,-20) to[out=155,in=0] (0in,-14.5) -- (0in,-20) -- (8in,-20);
+	
+	% \draw[thick] (-10,-20) to[out=45,in=270] (4,10);
+	% \draw[thick] (-10,-20) to[out=45,in=180] (14,-4.5);
+	\node[black] at (14.5in,4) {{\Huge  Carmichael / Greenberg}};
+	\node[black] at (14.5in,2) {{\Huge  System Notes}};
+	\node[black] at (14.5in,0) {{\Huge \today}};
+	\node[black] at (14.5in,-2) {{\Huge \spadesuit \heartsuit \diamondsuit \clubsuit }};
+	\node[white] at (15.75in,-16.5) {{\Huge TaJ++ Precision}}; 
+	
+	\filldraw[black!60!teal,fill=black!60!teal] (8in,-18.5) rectangle (9.5in, 10);
+	
+	\node[white, rotate=-90] at (8.75in,-4) {\Huge TaJ++ Precision - Carmichael / Greenberg};
+	\end{tikzpicture}
+\end{figure}
+\restoregeometry
+
+
+\end{document}
