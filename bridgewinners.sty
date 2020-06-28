@@ -757,6 +757,21 @@ WEST&EAST\\%
 	\par\@afterindentfalse\@afterheading%       preventing indent afterwards
 }
 
+\newcommand{\orauctionpart}[2][NoShow]{%
+	\par\noindent%
+	\gdef \seat@counter {0} %GDEF not DEF is important, otherwise it can't see the counter inside-vs-outside the for loop
+	\hspace{\auctionhspace}
+	\begin{tabular}{@{}p{\ewauctionspace}p{\ewauctionspace}}
+		OPENER&RESPONDER\\%
+		\IfEq{#1}{NoShow}{}{%
+			\@for \thislabel:=#1 \do {\textit{\thislabel} \twopersoncounter}%
+			\IfEq{\seat@counter}{0}{}{\gdef seat@counter {0} \\}%
+		}%
+		\@for \thisbid:=#2  \do {\printable{\thisbid} \twopersoncounter }
+		\\
+	\end{tabular}
+	\par\@afterindentfalse\@afterheading%       preventing indent afterwards
+}
 
 \newcommand{\twopersoncounter}{%
 \IfStrEqCase{\seat@counter}{{0}{%
