@@ -80,3 +80,16 @@
 	\end{longtable}
 	\end{center}
 }
+
+\newenvironment{auctionhead}{%
+	\par\noindent%
+	\setlength{\topsep}{0pt}%
+	\setlength{\partopsep}{0pt}%
+
+	\begin{minipage}{.8\textwidth}%
+		\setlength{\parindent}{0pt}%
+		\setlength{\auctionvspacebottom}{4pt}%
+		}
+		{%
+		\end{minipage}%	
+}

@@ -8,6 +8,9 @@
 \usepackage[margin=.2\textwidth]{geometry}
 \usepackage{longtable}
 \usepackage{graphicx, tikz}
+\usepackage[many]{tcolorbox}
+%\usepackage{marginnote}
+
 
 \setmainfont{DejaVu Serif}
 \setmathfont{DejaVu Serif}
@@ -37,6 +40,25 @@
 \renewcommand{\chapterheadstart}{\vspace*{0em}}
 
 \setlength\parindent{0pt} % Ari prefers no indentation for all paragraphs.
+\tcbuselibrary{skins,breakable}
+
+\newtcolorbox{noted}[1][]{
+	width=\textwidth,
+	colback=cyan!20,
+	colbacktitle=blue!85!black,
+	fonttitle=\bfseries,
+	left=0ex,
+	right=0ex,
+	top=0pt,
+	arc=0pt,
+	outer arc=0pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	toprule=0pt,
+	bottomrule=0pt,
+	breakable,
+	enhanced jigsaw,
+	title= \center{#1}}
 
 \begin{document}
 \frontmatter

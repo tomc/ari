@@ -9,23 +9,25 @@
 	
 	Like all strong club systems, the strength of the system lies not within the \cl1 opening itself but rather allowing for all other openers to be limited.  While we have some special sequences which allow for \"{u}ber max in TaJ sequences, most of our simple 1 level openings are going to be lighter than most people open.  All of our invitational and competitive decisions revolve around that fact.  This can be a factor in deciding between \cl1 and 1M, for example.
 	
-	\Huge{\color{red}ALPHA}
+	\Huge{\color{red}BETA}
 		
 	\normalsize
 	
 	\rem{(8 Jan 20) Modifying the previous BETA notes, these are ideas I've bounced off Jenni. It's a combination of the old and new ideas; less exact shape relays, but more strength bids and CIRKLE tie ins. Writing this up to kick off discussion, can always be reverted in GIT if need be.}
 	
+	\rem{(11 Nov 20) Bumped to Beta.  Still not sure this makes complete sense, since we may preempt ourselves in very normal auctions. Still in trial.}
+	
 	\begin{bidtable}{\orauction{1c}}
 		\di1 & No change, still negative. \\
 		\he1 & (UPH) Extra values w/o hearts \\
 		\he1 & (PH) Clubs. \\
-		\sp1 & 5+ Hearts unbal.  This is unlimited, unlike the other GF responses.  TaJ has the extra values step. \\
-		1NT & 5+ Spades unbal, no extras.  \cl2 TaJ, \sp2 is natural clubs. \\
-		\cl2 & (UPH) Clubs or Diamonds.  \di2 asks suit with LH \& zoom into TaJ with \diamondsuit\\
-		\cl2 & (PH) Diamonds. \di2 TaJ. \\
-		\di2 & 4 card \heartsuit ~bal\\
-		\he2 & 4 card \spadesuit ~without 4 \heartsuit, bal \\
-		\sp2 & No 4 card major, balanced \\
+		\sp1 & 5+ \hhh{s} unbal.  This is unlimited, unlike the other GF responses.  TaJ has the extra values step. \\
+		1NT & 5+ \sss{s} unbal, no extras.  \cl2 TaJ, \sp2 is natural clubs. \\
+		\cl2 & (UPH) \ccc~ or \ddd.  \di2 asks suit with LH \& zoom into TaJ with \ddd\\
+		\cl2 & (PH) \ddd; \di2 TaJ. \\
+		\di2 & 4 card \hhh ~Bal\\
+		\he2 & 4 card \sss ~without 4 \hhh, Bal \\
+		\sp2 & No 4 card major, Bal \\
 		2NT & \exactshape{1444} \\ 
 		\cl3 & \exactshape{4441} (bid sing)\\
 		\di3 & \exactshape{4414} (bid sing)\\
@@ -33,8 +35,6 @@
 		\sp3 & ``Gambling'' hand, AKQxxxx or better. Typically no side cards. \\
 		3NT--\he4 & 8+ card transfers, bust hand. No A or K. \\	
 	\end{bidtable}
-
-
 
 	\section[1C--1D]{\cl1--\di1}
 	
@@ -158,29 +158,44 @@
 		\di2, \he2 and \sp2 are balanced hands; similar to old \cl1--\sp1--1NT responses. The primary difference is the responses to bids are updated to use CIRKLE instead of controls. \rem{Anyone not using CIRKLE yet can retain the old structure.}
 	
 	\begin{bidtable}{\orauction{1c,2d}}
-		\he2 & Agrees \heartsuit, asks CIRKLE. \\
-		\sp2 & Shows 4+ spades, asks for support. 2NT by responder shows 4+ \spadesuit, over which \cl3 is CIRKLE. Bids above 2NT are suitless CIRKLE responses. \\
+		\he2 & Agrees \hhh, asks CIRKLE. \\
+		\sp2 & Shows 4+ spades, asks for support. 2NT by responder shows 4+ \sss, over which \cl3 is CIRKLE. Bids above 2NT are suitless CIRKLE responses. \\
 		2NT & Denies a major, suitless CIRKLE responses. \\
 		\cl3--\di3 & Natural \\
-		\he3 & No slam interest, 4 \heartsuit, choice of games. \\
-		\sp3 & No slam interest, exactly 4 \spadesuit, COG.  Rarely used. \\
+		\he3 & No slam interest, 4 \hhh, choice of games. \\
+		\sp3 & No slam interest, exactly 4 \sss, COG.  Rarely used. \\
 		3NT & To play \\
 	\end{bidtable}
 	
 	\begin{bidtable}{\orauction{1c,2h}}
-		\sp2 & Agrees \spadesuit, asks CIRKLE. \\
+		\sp2 & Agrees \sss, asks CIRKLE. \\
 		2NT & Denies a fit, suitless CIRKLE \\
 		\cl3--\he3 & Natural \\
-		\sp3 & No slam interest, exactly 4 \spadesuit, COG \\
+		\sp3 & No slam interest, exactly 4 \sss, COG \\
 		3NT & To play \\
 	\end{bidtable}
+
+	\begin{bidtable}{\orauction{1c,2s}}
+		2NT & Suitless CIRKLE \\
+		\cl3 & Nat, but considering making this a shape relay. See below. \\
+		Other & Nat \\
+	\end{bidtable}
+
+	\pagebreak
+	
+	\begin{noted}[Minor Suit Shape Relay]
+		In the past I have played \cl3 as asking with \di3 as a 5332 either minor (+1 for LH), 3M as doubleton in 2344, 3NT any 4333. Ari mentioned whether we have a shape search over this bid during play in the JLall so adding this comment here for discussion.
+	\end{noted}
+
 	\subsection{3 suiters}
 	
 	2NT thru \he3 are 3 suited hands with shortness in the bid suit. 2NT shows short spades. Over these 4x1 bids, every suit can be agreed below game. 3NT to play, agreeing a suit triggers CIRKLE for that suit.
 	
 	\subsection[3S]{\sp3}
 	
-	``Gambling'' type hand, AKQ 7th or better with nothing much on the side. Intended to be a picture bid. No special responses at this time. Probably should develop something, perhaps \cl4 asking for shortness. RKC/CIRKLE doesn't seem to make much sense, only shape seems likely to matter.
+	``Gambling'' type hand, AKQ 7th or better with nothing much on the side. Intended to be a picture bid. No special responses at this time. 
+
+	11 Nov 2020:  Tentative suggestion of \cl4 asking for shortness, NLMH.  The assumption is that opener knows the suit. 
 
 \end{document}
 
