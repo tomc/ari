@@ -1,248 +1,556 @@
-	Since we are allowed to have a written defense to Multi in any event, I've decided to include the one generally given by the USBF to its teams for play abroad.  It's an enhanced version of the ``option 2'' defense.
-	
-	It is \textbf{several} pages long; it may take a bit to get it all typed up, but this is a start.
-	
-	\subsection{Direct Bids}
-	
-	\begin{bidtable}{\compauct{2d}}
+\documentclass[letterpaper,11pt,oneside]{memoir}
+\usepackage{bridge-mini} % reduced version of my bridge.sty
+\usepackage{bridgewinners} % taken without modification, but changing things below
+\usepackage{fontspec}
+\usepackage{unicode-math}  % to allow for new fonts in math mode (i.e., suit symbols)
+\usepackage[margin=.2\textwidth]{geometry}
+\usepackage{longtable}
+\usepackage[many]{tcolorbox}
+
+\setmainfont{DejaVu Serif}
+\setmathfont{DejaVu Serif}
+
+\cftsetindents{part}{-1em}{3em} % Adjust table of content defaults, numbers and titles were running together.
+\cftsetindents{chapter}{-1em}{3em}
+\cftsetindents{section}{0em}{3em}
+\setcounter{tocdepth}{1} % include sections not subsections
+
+\abnormalparskip{1em} % add space between paragraphs for readability
+
+
+\standardsuitsymbols
+
+\letterten
+\chapterstyle{ell}
+\renewcommand{\chapterheadstart}{\vspace*{0em}}
+
+\setlength\parindent{0pt} 
+\tcbuselibrary{skins,breakable}
+
+\newtcolorbox{noted}[1][]{
+	width=\textwidth,
+	colback=cyan!20,
+	colbacktitle=blue!85!black,
+	fonttitle=\bfseries,
+	left=0ex,
+	right=0ex,
+	top=0pt,
+	arc=0pt,
+	outer arc=0pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	toprule=0pt,
+	bottomrule=0pt,
+	breakable,
+	enhanced jigsaw,
+	title= \center{#1}}
+
+\begin{document}
+\frontmatter
+\title{USBF Defense to Multi}
+\author{\copyright 2018 Jan \& Chip Martel\\ \vspace{1em} \\ Typeset into \LaTeX~ by Tom Carmichael}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\mainmatter
+
+\chapter{Introduction}
+
+This document is designed to be used at the table where written notes for defenses to Multi are allowed.  At the time of writing this document, that includes all ACBL events and WBF events where Multi is allowed.
+
+The basic structure is similar to the ``Option 2'' defense from the ACBL defense database:  direct bids are natural, Dbl is a split ranged balanced hand or strong, 2NT is natural.  What those defense are missing are notes for extended situations; examples include:  how do we show stoppers when we don't know the suit?  How do we cuebid with no known suit?  How do we respond to balanced doubles?
+
+This document is quite complex; it is recommended you review it thoroughly before attempting to play it in competition.
+
+\chapter{Direct Actions}
+	\section[Direct Bids over 2D]{Direct Bids over \di2}
+		\begin{bidtable}{\compauct{2d}}
 		Dbl & 13-15 or 19+ Bal, or 18+ Unbal (13-16 if partner is a PH) \\
-		\he2/\sss & Natural.  Cheapest bid in OM is \underline{natural} \\
-		  & \he2--\sp3 is a cuebid.  \sp2--\he4 is a splinter. \\
-		  & 3m response 4+ since no Q available. \\
-		  & 4m jumps = splinter \textbf{except \sp2--\cl4 = bal or spl slam try.} \\
-  	2NT & 16-18, resp as per 2NT opener.  \\
-  		& If responder bids 3M P/C, Dbl (and delayed Dbl) are takeout, other natural. \\
- 		\cl3 & Natural.  \di3 Artificial, like a cuebid. \\
- 		\di3 & Natural.  \he3 2-way, see below. \\
- 		3M & Strong, OM is a cuebid. \\
- 		3NT & Based on long minor. \cl4 asks, LH. +1 over that is RKC. \\
- 			& \di4/\hhh ~~Texas Xfer \\
+		\he2/\sss & Natural.  Cheapest bid in OM is \textbf{\textit{natural}} \\
+		2NT & 16-18  \\
+		\cl3 & Natural.  \di3 Artificial, like a cuebid. \\
+		\di3 & Natural.  \he3 2-way, see below. \\
+		3M & Strong, OM is a cuebid. \\
+		3NT & Based on long minor. \cl4 asks, LH. +1 over that is RKC. \\
+		& \di4/\hhh ~~Texas Xfer \\
+		\label{LeapingMichaels}
 		\cl4 & \ccc~\& Major, \di4 asks.  GF \\
 		\di4 & \ddd~\& Major, \he4 P/C. GF \\
 	\end{bidtable}
 
-	\subsection{Overcalls}
+	\section{Overcalls}	
+		
+		\subsection{\he2/\sss}
+		
+		Natural overcall with no cuebid below game available.  Some special meanings:
+		
+		\begin{description}
+			\item[\he2--\sp2] Natural
+			\item[\sp2--\he3] Natural
+			\item[\he2--\sp3] Cuebid, GF
+			\item[\sp2--\he4] Spl
+			\item[3m] 4+ F1; May take the place of a below-game cuebid
+			\item[4m] Jumps are spl, \textbf{except \sp2--\cl4 = bal or spl slam try.} 
+		\end{description}
+		
+		\begin{bidtable}{
+				\begin{auctionhead}
+					\compauct{2d,2h/\sss,x\auctionnote{1}} 
+					\explain{1. Pass or Correct}	
+				\end{auctionhead}
+			}
+			XX & Good Hand \\
+			2NT & Running \\
+			Suits & Natural \\
+			P (P) & Opener should probably run \\
+		\end{bidtable}
 	
-	Over Dbl Pass or Correct by responder
-	
-	\begin{bidtable}{\compauct{2d,2h/\sss,x}}
-		XX & Good Hand \\
-		2NT & Running \\
-		Suits & Natural \\
-		P (P) & Opener should probably run \\
-	\end{bidtable}
-	
-	\begin{bidtable}{\compauct{2d,3c,p,3d,p}}
-		\he3 & Natural or \hhh~ stopper w/o a \sss~ stopper \\
-			& \sp3~= 4 \hhh{s}, now 3NT = NF w/ \hhh~ stop but no \sss~ stop \\
-			& 3NT \sss~stop, no interest in playing in \hhh \\
-		\sp3 & Presumed Natural, F \\
-		3NT & Natural w/ \sss~ stopper, \hhh~ stopper unknown \\
-	\end{bidtable}
+		\subsection{2NT}
+		
+		16--18, systems on as per 2NT opener.  If Responder bids \he3/\sss Pass or Correct, both direct and delayed doubles are takeout.  Everything else is natural.
+		
+		\subsection{\cl3/\ddd}
+		
+		\label{minorOC}
+		Over \cl3, \di3 is artificial and similar to a cuebid.  It might be the start of a NT probe, it might be a club raise.  \he3/\sss is natural.
+		
+		\begin{bidtable}{\compauct{2d,3c,p,3d,p}}
+			\he3 & Natural or \hhh~ stopper w/o a \sss~ stopper \\
+			& \sp3: 4 \hhh{s}, now 3NT = NF w/ \hhh~ stop but no \sss~ stop \\
+			& 3NT: \sss~stop, no interest in playing in \hhh \\
+			\sp3 & Presumed Natural, F \\
+			3NT & Natural w/ \sss~ stopper, \hhh~ stopper unknown \\
+		\end{bidtable}
+		
+		Over \di3, \he3 is a multi way bid.  \sp3 is natural.
+		
+		\begin{bidtable}{\compauct{2d,3d,p}}
+			\he3 & Natural or a \hhh~ stop and no \sss~ stop \\
+			& \sp3: Interest in playing in \hhh, now 3NT = \hhh~stop w/o \sss~stop \\
+			& 3NT: \sss~ stop, no interest in \hhh \\
+			& \he4: 4 card \hhh, no \sss~stop, NF \\
+			\sp3 & Natural, F \\
+		\end{bidtable}
+		
+		\subsection{Further competition}
+		
+		If they make a pass or correct type bid over Overcaller's action:
+		
+		\begin{bidtable}{\compauct{2d,Bid,2\sss/3x}}
+			Dbl & Cards \\
+			\he4 & Natural, even over \he3 \\
+		\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,3d,p}}
-		\he3 & Natural or a \hhh~ stop and no \sss~ stop \\
-			& \sp3 shows interest in playing in \hhh, 3NT by advancer shows the \hhh~stop w/o \sss~stop \\
-			& 3NT \sss~ stop, no interest in \hhh \\
-			& \he4 4 card \hhh, no \sss~stop, NF \\
-		\sp3 & Natural, F \\
-	\end{bidtable}
+\chapter[2D--Dbl]{\di2--Dbl}	
 
-	\begin{bidtable}{\compauct{2d,Bid,2\sss/3x}}
-		X & Cards \\
-		\he4 & Natural, even over \he3 \\
-	\end{bidtable}
+This chapter will deal with responding to the split range double.  Dbl is 13--15 bal, 19+ bal or 18+ unbal.
+
+\section[2D--Dbl--P/XX]{\di2--Dbl--P/XX}
 	
-	\subsection{\di2--X--P/XX}
-	
-	\begin{bidtable}{\compauct{2d,x,Pass/XX}}
-		Pass & Willing to defend \di2 X or XX, might not be a big diamond hand \\
-		     & Major Q after Pass = ask stop \\
-    2M & Nat, Comp.  \di3 = Q, other NAT \\
-    2NT & 5+ \ccc, requests \cl3 when Dbl is 13-15. Over \cl3, \di3 = GF 1 suiter in \ccc, other NAT GF \\
-    \cl3 & GF Stayman.  \cl3--\di3--3M = worried about stopper in OM if P/XX was neutral, worry about \ddd stopper if P/XX showed \ddd \\
-    \di3/\hhh & Xfer, inv+.  See below (p. \pageref{multixfer}) for continuations. \\
-    3NT & 11--16 w/ \ddd stop \\
-    4m & Strong invite \\
-    4M & NF \\
-    4NT & Straight Blackwood \\
-	\end{bidtable}
-	
-	\begin{noted}[Choosing between Pass and 2NT with a weak hand:]
+\begin{bidtable}{\compauct{2d,x,Pass/XX}}
+	Pass & Willing to defend \di2 X or XX, might not be a big diamond hand \\
+	& Major Q after Pass = ask stop \\
+	2M & Nat, Comp.  \di3 = Q, other NAT \\
+	2NT & 5+ \ccc, requests \cl3 when Dbl is 13-15 \\
+	\di3/\hhh & Xfer, inv+   \\
+	3NT & 11--16 w/ \ddd stop \\
+	4m & Strong invite \\
+	4M & NF \\
+	4NT & Straight Blackwood \\
+\end{bidtable}
+
+\begin{noted}[Choosing between Pass and 2NT with a weak hand:]
 	Generally, avoid bidding 2NT since it will often get NT played from the wrong side.  If responder's P/XX showed \ddd, bid 2NT with 3325 or 6+ \ccc; if responder's P/XX was neutral, usually pass.
-	\end{noted}
+\end{noted}
 
-	\begin{bidtable}{\compauct{2d,x,Pass/XX,2n,p}}
-		\cl3 & 13-15 bal \\
-		\di3 & Art, 19+ Bal. Forcing to 3NT or higher. (\cl4 ok) \\
-			& \he3 Waiting, might be weak. 3NT NF, \cl4 Nat GF, 4NT Quant. \\
-		\he3 & Nat 18+ unbal, Forcing to 3NT or higher (\cl4 ok). \sp3=Q \\
-		\sp3 & Nat 18+ unbal, Forcing to 3NT or higher (\cl4 ok) \he4=Q \\
-		4M & Slam try \\
-	\end{bidtable}
-	
-	\begin{bidtable}{\compauct{2d,x,P/XX,p,2\hhh/\sss}}
-		Dbl & 19+ Bal, Takeout with Lebensohl \\
-		2NT & 19--21 Bal, stop in opener's M. Respond as per 2NT opener. \\
-		Other & Nat, 18+ \\
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,Pass/XX,2n,p}}
+	\cl3 & 13-15 bal \\
+		& \di3 is a 1-suited \ccc~ GF, other is natural and GF \\
+	\di3 & Art, 19+ Bal. Forcing to 3NT or higher. (\cl4 ok) \\
+	& \he3 Waiting, might be weak. \\
+	& 3NT NF \\
+	& \cl4 Nat GF \\
+	& 4NT Quant. \\
+	\he3 & Nat 18+ unbal, Forcing to 3NT or higher (\cl4 ok). \sp3=Q \\
+	\sp3 & Nat 18+ unbal, Forcing to 3NT or higher (\cl4 ok) \he4=Q \\
+	4M & Slam try \\
+\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,x,P/XX,p,2\hhh/\sss,p,p}}
-		Dbl & Values, 2+ cards in M, no clear direction \\
-		3M & Spl \\
-		Other & Nat \\
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,P/XX,p,2\hhh/\sss}}
+	Dbl & 19+ Bal, Takeout with Lebensohl \\
+	2NT & 19--21 Bal, stop in opener's M. Respond as per 2NT opener. \\
+	Other & Nat, 18+ \\
+\end{bidtable}
 
-	\begin{bidtable}{
+\begin{bidtable}{\compauct{2d,x,P/XX,p,2\hhh/\sss,p,p}}
+	Dbl & Values, 2+ cards in M, no clear direction \\
+	3M & Spl \\
+	Other & Nat \\
+\end{bidtable}
+
+\begin{bidtable}{
 		\begin{auctionhead}
 			\compauct{2d,x,p,p,xx\auctionnote{1}} 
 			\explain{1. Specific Major}
 		\end{auctionhead}
 	}  
-		P & Neutral \\
-		Other & Nat, 19+ \\
-	\end{bidtable}
+	P & Neutral \\
+	Other & Nat, 19+ \\
+\end{bidtable}
 
-	\begin{bidtable}{
+\begin{bidtable}{
 		\begin{auctionhead}
 			\compauct{2d,x,p,p,xx\auctionnote{1},p,2\hhh/\sss\auctionnote{2}} 
 			\explain{1. Specific Major}
 			\explain{2. Can be same or different from major shown by XX}
 		\end{auctionhead}
 	}
-		Dbl & Needs definition \rem{Cards takeout?}
-	\end{bidtable}
+	Dbl & Needs definition.  Placeholder:  cards, takeout. \\
+\end{bidtable}
 
-	\label{multixfer}
-	\begin{bidtable}{
-			\begin{auctionhead}
-				\compauct{2d,x,P/XX/2\hhh/\sss,3d\auctionnote{1},p}
-				\explain{1. Xfer to \hhh}	
-			\end{auctionhead}
-	}
-		\he3 & 13-15, reject invite \\
-		\sp3 & Q, choice of games \\
-		4m,4NT & Nat, 19+ \\
-		3NT,\he4 & 13-15, accept invite \\
-		\sp4 & RKC for \hhh \\		
-	\end{bidtable}	
 
-	\begin{bidtable}{
-		\begin{auctionhead}
-			\compauct{2d,x,P/XX/2M,3h\auctionnote{1},p} 
-			\explain{1. Xfer to \sss}			
-		\end{auctionhead}
-	}
-		\sp3 & 13-15, reject invite \\
-		4m,4NT & Nat, 19+ \\
-		3NT/\sp4 & 13-15, accept invite \\
-		\he4 & Cuebid, 18+, fit. \sp4--4NT is RKC \\
-	\end{bidtable}
+\section[2D--Dbl--2H]{\di2--Dbl--\he2}
 
-	\subsection{\di2--Dbl--\he2}
-	
 	This section is all about bids after \di2--Dbl--\he2 where \he2 is P/C.
-	
-	\begin{bidtable}{\compauct{2d,x,2h}}
-		Pass & NF (Dbl of correction = T/O) \\
-		Dbl & 10-12 Bal or Semi-Bal, some defensive tolerance \\
-		\sp2 & NF, typically 5+ \\
-		2NT & Semi-Puppet to \cl3, either signoff (6-9) minor, GF minor or bal with only \sss~stop \\
-		\cl3 & GF Stayman, does not promise a major \\
-		\di3/\hhh & Inv+ xfer. See above (p. \pageref{multixfer}) for follow ups. \\
-		\sp3 & GF with short \hhh~and 0-3 \sss. \\
-		3NT & 11-16, both Majors stopped \\
-		4m & Strong Invite \\
-		4M & Nat NF \\
-		4NT & Straight Blackwood \\
-	\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,x,2h,p,P/2\sss}}
-		Dbl & 19+ Bal, T/O w/ Lebensohl \\
-		2NT & 19-21 Bal, \hhh stop; bid as over 2NT overcall of \he2 \\
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,2h}}
+	Pass & NF (Dbl of correction = T/O) \\
+	Dbl & 10-12 Bal or Semi-Bal, some defensive tolerance \\
+	\sp2 & NF, typically 5+ \\
+	2NT & Semi-Puppet to \cl3; either minor signoff (6-9), GF minor or bal with only \sss~stop \\
+	\cl3 & GF Stayman, does not promise a major \\
+	\di3/\hhh & Inv+ xfer. \\
+	\sp3 & GF with short \hhh~and 0-3 \sss. \\
+	3NT & 11-16, both Majors stopped \\
+	4m & Strong Invite \\
+	4M & Nat NF \\
+	4NT & Straight Blackwood \\
+\end{bidtable}
 
-	\begin{bidtable}{
+\begin{bidtable}{\compauct{2d,x,2h,p,P/2\sss}}
+	Dbl & 19+ Bal, T/O w/ Lebensohl \\
+	2NT & 19-21 Bal, \hhh stop; bid as over 2NT overcall of \he2 \\
+\end{bidtable}
+
+\begin{bidtable}{
 		\begin{auctionhead}
 			\compauct{2d,x,2h,2n\auctionnote{1},p} 
 			\explain{1. Semi-puppet to \cl3}
 		\end{auctionhead}
 	}
-		\cl3 & 13-15 Bal \\
-		\di3 & Art, 19+ Bal, GF \\
-		\he3 & Nat, 18+ Unbal; \sp3=Q, 4m Nat \\
-		\sp3 & Nat, 18+ Unbal; \he4=Q, 4m Nat \\
-		3NT & Nat, good hand with a long minor \\
-		4m & Nat, 18+ Unbal \\
-		4M & Slam try \\
-	\end{bidtable}
+	\cl3 & 13-15 Bal \\
+	\di3 & Art, 19+ Bal, GF \\
+	\he3 & Nat, 18+ Unbal; \sp3=Q, 4m Nat \\
+	\sp3 & Nat, 18+ Unbal; \he4=Q, 4m Nat \\
+	3NT & Nat, good hand with a long minor \\
+	4m & Nat, 18+ Unbal \\
+	4M & Slam try \\
+\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,x,2h,2n,p,3c,p}}
-		Pass & How to play \cl3 \\
-		\di3 & NF, expected end of auction \\
-		\he3 & GF \ccc \\
-		\sp3 & GF \ddd \\
-		3NT & Bal GF, only \sss~stop \\
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,2h,2n,p,3c,p}}
+	Pass & How to play \cl3 \\
+	\di3 & NF, expected end of auction \\
+	\he3 & GF \ccc \\
+	\sp3 & GF \ddd \\
+	3NT & Bal GF, only \sss~stop \\
+\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,x,2h,2n,p,3d,p}}
-		\he3 & \ccc, 8-9, slam interest \\
-		\sp3 & \ddd, 8-9, slam interest \\
-		3NT & NF \\
-		4m & 12+ Nat; +1 RKC, 4NT Nat \\
-		4NT & Nat, highly invititational \\
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,2h,2n,p,3d,p}}
+	\he3 & \ccc, 8-9, slam interest \\
+	\sp3 & \ddd, 8-9, slam interest \\
+	3NT & NF \\
+	4m & 12+ Nat; +1 RKC, 4NT Nat \\
+	4NT & Nat, highly invititational \\
+\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,x,2h,x,p}}
-		\sp2 & 4 \sss, denies a maximum with a \hhh~stop \\
-		2NT & NF min \\
-		3m & NF min \\
-		\he3 & Max w/ 4 \sss~\& \hhh~stop \textbf{OR} 19+ (Semi-)Bal w/ 4 \sss. \\
-			& \sp3\rightarrow3NT, \he4\rightarrow\sp4 (bid more with 19+) \\
-		\sp3 & Max, 0-3 \sss, no stop \textbf{OR} 20+ Bal (bid again) \\
-		3NT & Max, 0-3 \sss, stopper, NF \\
-		4m & Nat, 19+; +1 RKC, 4NT Nat \rem{Orig notes say \he4 not +1} \\ 
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,2h,x,p}}
+	\sp2 & 4 \sss, denies a maximum with a \hhh~stop \\
+	2NT & NF min \\
+	3m & NF min \\
+	\he3 & Max w/ 4 \sss~\& \hhh~stop \textbf{OR} 19+ (Semi-)Bal w/ 4 \sss. \\
+	& \sp3\rightarrow3NT, \he4\rightarrow\sp4 (bid more with 19+) \\
+	\sp3 & Max, 0-3 \sss, no stop \textbf{OR} 20+ Bal (bid again) \\
+	3NT & Max, 0-3 \sss, stopper, NF \\
+	4m & Nat, 19+; \he4 RKC, 4NT Nat \\ % Tom would play 4D as RKC / 4C, but trying to preserve what was written in word doc.
+\end{bidtable}
 
-	\subsection{\di2--Dbl--\sp2}
-	
+\section[2D--Dbl--2S]{\di2--Dbl--\sp2}
+
 	As in the previous section, \sp2 is P/C.
-	
-	\begin{bidtable}{\compauct{2d,x,2s}}
-		Pass & NF, Dbl of correction is T/O \\
-		Dbl & 10-12 Bal or Semi-Bal, some defensive tolerance \\
-		2NT & Semi-puppet to \cl3: 6-9 minor NF, GF minor or Bal with only \hhh~stop \\
-		\cl3 & GF Stayman, does not promise a major \\
-		\di3/\hhh & Xfer \\
-		\sp3 & GF with \sss shortness, 0-3 \hhh \\
-		3NT & 11-15, both Majors stopped \\
-		4m & Strong invite \\
-		4M & Nat NF \\
-		4NT & Straight Blackwood \\
-	\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,x,2s,p,p}}
-		Dbl & 19+ Bal, T/O w/ Lebensohl \\
-		2NT & 19-21 Bal, \sss stop; bid as over 2NT overcall of \sp2 \\
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,2s}}
+	Pass & NF, Dbl of correction is T/O \\
+	Dbl & 10-12 Bal or Semi-Bal, some defensive tolerance \\
+	2NT & Semi-puppet to \cl3: 6-9 minor NF, GF minor or Bal with only \hhh~stop \\
+	\cl3 & GF Stayman, does not promise a major \\
+	\di3/\hhh & Xfer \\
+	\sp3 & GF with \sss shortness, 0-3 \hhh \\
+	3NT & 11-15, both Majors stopped \\
+	4m & Strong invite \\
+	4M & Nat NF \\
+	4NT & Straight Blackwood \\
+\end{bidtable}
 
-	\begin{bidtable}{\compauct{2d,x,2s,p,3h}}
-		Dbl & 19+ Bal \\
-		Other & Nat, 19+ \\
-	\end{bidtable}
+\begin{bidtable}{\compauct{2d,x,2s,p,p}}
+	Dbl & 19+ Bal, T/O w/ Lebensohl \\
+	2NT & 19-21 Bal, \sss stop; bid as over 2NT overcall of \sp2 \\
+\end{bidtable}
 
-	\begin{bidtable}{
+\begin{bidtable}{\compauct{2d,x,2s,p,3h}}
+	Dbl & 19+ Bal \\
+	Other & Nat, 19+ \\
+\end{bidtable}
+
+\begin{bidtable}{
 		\begin{auctionhead}
 			\compauct{2d,x,2s,2NT\auctionnote{1},p}
 			\explain{1. Semi-puppet to \cl3}
 		\end{auctionhead}
 	}
-		\cl3 & 13-15 Bal \\
-		\di3 & Art, 19+ Bal, GF \\
-		\he3 & Nat, 18+ Unbal, GF; \sp3=Q, 4m Nat \\
-		\sp3 & Nat, 18+ Unbal, GF; \he4=Q, 4m Nat \\
-		3NT & Nat, good hand with a long minor \\
-		4m & Nat, 18+ Unbal \\
-		4M & Nat, Slam try \\
+	\cl3 & 13-15 Bal \\
+	\di3 & Art, 19+ Bal, GF \\
+	\he3 & Nat, 18+ Unbal, GF; \sp3=Q, 4m Nat \\
+	\sp3 & Nat, 18+ Unbal, GF; \he4=Q, 4m Nat \\
+	3NT & Nat, good hand with a long minor \\
+	4m & Nat, 18+ Unbal \\
+	4M & Nat, Slam try \\
+\end{bidtable}
+
+\section[2D--Dbl--3x]{\di2--Dbl--3x}
+
+For this section, most of our bids are going to be natural in nature with doubles being responsive/cards. We have far less room to have delicate artificial auctions. There may still be some transfers when available.
+
+\begin{bidtable}{\compauct{2d,x,3c}}
+	Dbl & Cards \\
+	\di3 & Xfer to \hhh, inv+.  (\sp3 is Nat, not a cuebid.) \\
+	\he3 & Xfer to \sss, inv+ \\
+	\sp3 & \ddd, \di4 by Doubler only Non-GF call \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,x,3d}}
+	Dbl & Responsive, wide ranging \\
+	3M & Forcing 1 round by UPH \\
+	\di4 & Cuebid \\
+	4x & Nat \\
+\end{bidtable}
+
+\begin{bidtable}{\begin{auctionhead}\compauct{2d,x,3h\auctionnote{1}}\explain{1. Pass or Correct}\end{auctionhead}}
+	\sp3 & Nat, Forcing 1 round by UPH \\
+	4m & Nat, Forcing 1 round by UPH \\
+	\he4 & \textbf{Natural}, not a cuebid \\
+	Pass & \ldots~\sp3--P--P--Dbl: Takeout \\
+\end{bidtable}
+
+\begin{bidtable}{\begin{auctionhead}\compauct{2d,x,3s\auctionnote{1}}\explain{1. Pass or Correct}\end{auctionhead}}
+	Dbl & Responsive, wide ranging \\
+	\sp4 & Cuebid \\
+	4m & Nat, Forcing 1 round by UPH \\
+	\he4 & Nat \\
+\end{bidtable}
+
+\section{Stayman/Transfers}
+
+In general, responses to the double resemble typical NT methods.  \cl3 is Stayman (GF), \di3/\hhh are Transfers.  \sp3 is not defined in all auctions.
+
+	\begin{bidtable}{
+		\begin{auctionhead}
+			\compauct{2d,x,any,3c\auctionnote{1},p,3d,p}
+			\explain{1.  GF Stayman}
+		\end{auctionhead}
+	}
+	\he3/\sp3 & Showing a stop, worried about a suit. If Pass/XX is neutral, the other suit is the other major.  If Pass/XX shows \ddd then that is the suit.	
 	\end{bidtable}
 
+	\begin{bidtable}{
+		\begin{auctionhead}
+			\compauct{2d,x,any,3d\auctionnote{1},p}
+			\explain{1. Xfer to \hhh}	
+		\end{auctionhead}
+	}
+	\he3 & 13-15, reject invite \\
+	\sp3 & Q, choice of games \\
+	4m,4NT & Nat, 19+ \\
+	3NT,\he4 & 13-15, accept invite \\
+	\sp4 & RKC for \hhh \\		
+\end{bidtable}	
+
+\begin{bidtable}{
+		\begin{auctionhead}
+			\compauct{2d,x,P/XX/2M,3h\auctionnote{1},p} 
+			\explain{1. Xfer to \sss}			
+		\end{auctionhead}
+	}
+	\sp3 & 13-15, reject invite \\
+	4m,4NT & Nat, 19+ \\
+	3NT/\sp4 & 13-15, accept invite \\
+	\he4 & Cuebid, 18+, fit. \sp4--4NT is RKC \\
+\end{bidtable}
+  
+
+\chapter[2D--P--Bid]{\di2--P--Bid}
+
+This chapter is dedicated to auctions where ``advancer'' is the first person to act for our side in a typical multi auction.  
+
+\section[2D--P--2H]{\di2--P--\he2}
+
+\he2 is assumed to be pass or correct for this entire section.
+
+\begin{bidtable}{\compauct{2d,p,2h}}
+	Dbl & Either T/O of \hhh or 18+; Leb applies; might be light with short \hhh \\
+	\sp2 & Nat, limited by failure to Dbl \\
+	2NT & 14-18, respond as to 2NT opener \\
+	\cl3/\ddd & Nat, resp as to direct overcall.  See section \ref{minorOC}, p. \pageref{minorOC}	\\
+	3NT & Nat, 22--24 or equivalent with long suit \\
+	\cl4/\ddd & 5+ 5+ GF in bid minor and unknown major. See section \ref{LeapingMichaels}, p. \pageref{LeapingMichaels} \\
+	\he3/\sss & Natural. Other major = cuebid \\
+	\he4\sss & Natural. Other major = cuebid; \sp4 is RKC if you play Kickback \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,2h,x,2s}}
+	Dbl & Pen opp T/O of hearts, now \sp3 = Strong T/O of \sss \\
+	2NT & Nat \\
+	\he3 & Nat but assuming doubler is short in \hhh \\
+	\sp3 & Short \sss \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,2h,x,p}}
+	2NT & Lebensohl \\
+		& \sp3 rebid by 2NT hand shows 5 \sss, good hand \\
+		& 3NT rebid by 2NT hand shows 4 \sss, \hhh~stopper \\	
+\end{bidtable}
+
+\label{3NT}
+\begin{bidtable}{\compauct{2d,p,2h,3n,p}}
+	\cl4 & Asking, then \\
+		& \di4: Bal \\
+		& \he4: \ccc \\
+		& \sp4: \ddd \\
+	\di4/\hhh & Texas \\
+	\sp4 & Both Minors \\
+\end{bidtable}
+
+\section[2D--P--2S]{\di2--P--\sp2}
+
+\sp2 is assumed to be pass or correct for this entire section.
+
+\begin{bidtable}{\compauct{2d,p,2s}}
+	Dbl & T/O or any 18+; Leb; may be light with short \sss \\
+	2NT & 14--18, respond as per 2NT opener \\
+	\cl3/\ddd & Nat, resp as to direct overcall.  See section \ref{minorOC}, p. \pageref{minorOC}	\\
+	3NT & Nat, 22--24 or equivalent with long suit \\
+	\cl4/\ddd & 5+ 5+ GF in bid minor and unknown major. See section \ref{LeapingMichaels}, p. \pageref{LeapingMichaels} \\
+	\he3/\sss & Natural. Other major = cuebid \\
+	\he4\sss & Natural. Other major = cuebid; \sp4 is RKC if you play Kickback \\	
+\end{bidtable}
+
+\begin{bidtable}{\begin{auctionhead}\compauct{2d,p,2s,x,3h\auctionnote{1}}
+		\explain{1. Or other bid which shows \hhh}\end{auctionhead}}
+	Dbl & Cards \\
+	\he3 & Shortness, when available. \\
+	\sp3 & Nat, assuming partner is short in spades \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,x,3h,p,p}}
+	Dbl & 18+ T/O \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,2s,x,(bid),p,3h}}
+	Dbl & 18+ T/O \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,2s,3n,p}}
+	\cl4 & Asking, then \\
+	& \di4: Bal \\
+	& \he4: \ccc \\
+	& \sp4: \ddd \\
+	\di4/\hhh & Texas \\
+	\sp4 & Both Minors \\
+\end{bidtable}
+
+\chapter{Other Sequences}
+
+\section{Balancing}
+
+\begin{bidtable}{\compauct{2d,p,2h,p,p}}
+	Dbl & T/O; Lebensohl \\
+	2NT & Minors, moderate values \\
+	Other & Natural, weaker than direct \\
+\end{bidtable}
+	
+\begin{bidtable}{\compauct{2d,p,2h,p,2s}}
+	Dbl & T/O; Lebensohl \\
+	2NT & Any 2 suits, moderate values.  3NT over \di2--p--\he3--p--\sp3 same \\
+	Other & Natural, weaker than direct \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,2s,p,p}}
+	Dbl & T/O; Lebensohl \\
+	2NT & Any 2 suits, moderate values.  3NT over \di2--p--\he3--p--\sp3 same \\
+	Other & Natural, weaker than direct \\
+\end{bidtable}
+
+\begin{bidtable}{\begin{auctionhead}\compauct{2d,p,2s,p,3h\auctionnote{1}}
+				\explain{1. Or other bid which shows \hhh}\end{auctionhead}}
+	Dbl & T/O; Lebensohl \\
+	3NT & Minors, moderate values \\
+	Other & Natural, weaker than direct \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,2h,p,2s,p,p}}
+	Dbl & T/O, 10--17 HCP. With more direct Dbl of \he2; Leb \\
+	2NT & Any 2 suits, moderate values. 3NT over \di2--p--\he3--p--\sp3 same \\
+	Other & Natural, weaker than direct \\
+\end{bidtable}	
+
+\section{Preemptive Responses}
+
+\begin{bidtable}{\compauct{2d,p,3h/\sss/4\hhh/\sss}}
+	Dbl & T/O or 18+ any \\
+	Pass then Dbl & T/O \\
+	Pass then 3NT & 2 suits \\
+	3NT & Natural, see \ref{3NT}, p. \pageref{3NT}
+\end{bidtable}
+
+Over \cl4/\ddd Artificial, commonly played as Transfer/Bid your suit:
+
+\begin{bidtable}{\compauct{2d,p,4c/\ddd}}
+		Dbl & Shows the bid suit, values to compete \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,4c,p,4x}}
+	Dbl & Lead Direction \\
+\end{bidtable}
+
+\begin{bidtable}{\compauct{2d,p,4c/\ddd,p,4x,p,p/4M}}
+	Dbl & T/O assuming final bid is natural \\
+\end{bidtable}
+
+\section{2NT Asking}
+
+This section is for actions over a positive asking bid by Responder.
+
+\begin{bidtable}{\compauct{2d,p,2n}}
+	Dbl & 15+ \\
+	\cl3/\ddd & Natural.  See \ref{minorOC} p. \pageref{minorOC} \\
+	\he3/\sss & Natural \\
+	3NT & Tricks \\
+	\he4/\sss & Strong Nat \\
+	\cl4/\ddd & 5+ 5+ in bid minor + unknown major. See \ref{LeapingMichaels} p. \pageref{LeapingMichaels} \\
+\end{bidtable}
+
+\begin{bidtable}{
+	\begin{auctionhead}
+		\compauct{2d,p,2n,p,3c/\ddd\auctionnote{1}}
+		\explain{1. Shows a specific Major}
+	\end{auctionhead}	
+}
+	Dbl & Lead direction \\
+\end{bidtable}
+	
+\section{Multi Passed}
+
+Over \di2--P--P, bid as over a weak \di2
+
+\end{document}
